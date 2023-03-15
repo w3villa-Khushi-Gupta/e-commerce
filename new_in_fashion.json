@@ -1,0 +1,36 @@
+{
+    "new_in_fashion": [
+        {
+            "img":"https://source.unsplash.com/75x100/? black dress",
+            "label":true,
+            "new":true,
+            "top_brands":true,
+            "type":"Bodycon Dress",
+            "price":"$399.00"
+        },
+        {
+            "img":"https://source.unsplash.com/75x100/?girl",
+            "label":false,
+            "top_brands":true,
+            "new":true,
+            "type":"Black Lace Dress",
+            "price":"$589.00"
+        },
+        {
+            "img":"https://source.unsplash.com/75x100/?turtleneck,man",
+            "label":false,
+            "top_brands":true,
+            "new":false,
+            "type":"Jacob Turtle Neck",
+            "price":"$369.00"
+        },
+        {
+            "img":"https://source.unsplash.com/75x100/?boy,tshirt",
+            "label":false,
+            "top_brands":true,
+            "new":true,
+            "type":"Tshirt",
+            "price":"$392.00"
+        }
+    ]
+}

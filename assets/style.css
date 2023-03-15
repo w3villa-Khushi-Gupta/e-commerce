@@ -1,0 +1,369 @@
+
+/* ************Common Classes************** */
+a{
+    text-decoration: none;
+}
+
+li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+span{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 2px;
+}
+.underline{
+    width: 70px;
+    height: 4px;
+    background-color: rgb(228, 97, 45);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.plr{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.mtb{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* *************Common Classes*************** */
+
+/* *************Navbar 2 **********************/
+#journal{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+#icons li{
+    text-align: center;
+}
+#icons li i{
+    color: rgb(238, 240, 241);
+    background-color:grey ;
+    border-radius: 50%;
+    padding: 10px;
+}
+#icons li h6{
+    color: gray;
+    font-size: 20px;
+    padding-top: 5px;
+}
+#cart h6{
+    color: gray;
+    font-size:20px ;
+    padding: 10px;
+}
+#cart i{
+    color:white ;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+   
+}
+/* *************Navbar 2***************** */
+
+/* *************Navbar 3***************** */
+#all_dep li i{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+
+}
+#all_dep li h6{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+}
+/* *************Navbar 3***************** */
+
+/* *************Secton 1***************** */
+
+/* *************Carousel***************** */
+.carousel-inner{
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+.carousel-indicators{
+    margin-right: 850px;
+}
+
+.carousel-item .carousel-caption{
+    text-align: left;
+    padding-bottom: 100px;
+}
+.learn_more{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+/* *************Carousel***************** */
+
+/* *************card***************** */
+
+.one , .two{
+    margin: 0px;
+    
+
+}
+.wearables{
+    width: 25rem;
+    background-color: rgb(77, 76, 76);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 52px;
+    padding-right: 0px;
+}
+.wearables-body{
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+
+    
+}    
+
+/* *************card**************** */
+/* *************Section 1**************** */
+
+/* **************Section2*************** */
+.perks .icon i{
+    color: rgb(228, 97, 45);
+    border: solid rgb(88, 88, 247);
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 20px;
+    margin-right: 10px;
+}
+.perks .content h5{
+    color: white;
+}
+.perks .content h6{
+    color: rgb(182, 179, 179);
+}
+.content{
+    font-size: 15px;
+    color: rgb(168, 165, 165);
+}
+/* **************Section2*************** */
+
+/* **************Section3*************** */
+.cutouts {
+    position: relative;
+}
+.cutouts img{
+    border-radius: 10px;
+}
+.cutouts a{
+    position: relative;
+    top: 240px;
+    left: 90px;
+    color: black;
+    background-color: rgba(143, 141, 141, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+}
+/* **************Section3*************** */
+
+/* **************Section 4************** */
+#product_list{
+    flex-wrap: wrap;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+    opacity: 1;
+}
+
+/* **************Section4*************** */
+
+/* **************Section5************** */
+.hero{   
+     flex-wrap: wrap;
+     width: 86%;
+     margin-left: auto;
+     margin-right: auto;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+
+#other_cards{
+    flex-wrap: wrap;
+}
+/* **************Section5*************** */
+
+/* **************Section6*************** */
+
+/* **************Section6*************** */
+
+.custom_labels{
+    top: 35px;
+    left: -40px;
+    transform: rotate(-45deg);
+    background-color: blue;
+    padding-left: 40px;
+    padding-right: 40px; 
+
+}
+.seventy{
+    top:15px ;
+    right: 15px;
+    background-color: red;
+    padding: 3px;
+}
+.hot{
+    top:50px ;
+    right: 15px;
+    background-color: orange;
+}
+.days{
+    top: 30px;
+    left: -40px;
+    transform: rotate(-45deg);
+    background-color: red;
+    padding-left: 45px;
+    padding-right: 45px; 
+    
+}
+.top_brands{
+    top:15px ;
+    right: 15px;
+    background-color: orange;
+}
+
+.free{
+
+    top: 20px;
+    left: -35px;
+    transform: rotate(-45deg);
+    background-color: green;
+    padding-left: 45px;
+    padding-right: 40px;
+}
+.pre_order{
+    top: 45px;
+    left: -40px;
+    transform: rotate(-45deg);
+    background-color: red;
+    padding-left: 65px;
+    padding-right: 55px;
+
+}
+.emo{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+}
+
+.product_list{
+    display: flex;
+}
+
+.date{
+    top: 7px;
+    left: 12px;
+    line-height: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.comma{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(228, 97, 45);
+    padding-top: 20px;
+}
+
+.all_icons i{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    border-radius:50%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.right{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(218, 214, 214);
+}
+
+#hell{
+    overflow: hidden;
+}
+.topA .left a{
+    font-size: 20px;
+    color: white;
+}
+.topA .left i{
+    font-size:18px;
+    color: blue;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+
+}
+.topA .right a{
+    font-size: 20px;
+    color: white;
+}
+
+/* *************For Responsivness*************** */
+
+@media screen and (max-width:2000px) {
+    .hide{
+        display: none;
+    }
+
+}
+@media screen and (max-width:991px) {
+    .nb1{
+        display: none;
+    }
+    .nb3{
+        display: none;
+    }
+    .hide{
+        display: block;
+    }
+    .hide .left{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .sec1{
+        display: block;
+    }
+    
+}
+@media screen and (max-width:620px) {
+    .plr{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    #cart i{
+        color: black;
+    }
+}
+
+@media screen and (max-width:526px) {
+    .sec13{
+        display: block;
+    }
+}
+/* *************For Responsivness*************** */

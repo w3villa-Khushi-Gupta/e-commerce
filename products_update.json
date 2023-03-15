@@ -1,0 +1,59 @@
+{
+    "products_update": [
+        {
+            "img": "assets/headphones.png",
+            "label": "Custom Labels",
+            "percentage":true,
+            "top_brand":false,
+            "sale": true,
+            "free":false,
+            "brand": "Erickson",
+            "model": "Model 519",
+            "name": "Headphones",
+            "price": "$999.0",
+            "strikethrough": "$3299.0"
+        },
+        {
+            "img": "assets/sandals.jpg",
+            "label": "2-3 Days",
+            "percentage": false,
+            "top_brand":true,
+
+            "sale": false,
+            "free":false,
+            "brand": "NY Fashion",
+            "model": "Model 206",
+            "name": "Women's Maria Pump",
+            "price": "$425.0",
+            "strikethrough": "0.00"
+        },
+        {
+            "img": "assets/tv_set.jpg",
+            "label": "Pre-Order",
+            "percentage": false,
+            "top_brand":false,
+
+            "sale": false,
+            "free":true,
+            "brand": "Erickson",
+            "model": "Model 206",
+            "name": "Toshiba 5009 Smart TV",
+            "price": "$0.0",
+            "strikethrough": "0.00"
+        },
+        {
+            "img": "assets/camera.jpg",
+            "label": "Pre-Order",
+            "percentage": true,
+            "top_brand":false,
+
+            "sale": false,
+            "free":false,
+            "brand": "Leica Digital Camera",
+            "model": "Model 206",
+            "name": "Headphones",
+            "price": "$425.0",
+            "strikethrough": "0.00"
+        }
+    ]
+}
