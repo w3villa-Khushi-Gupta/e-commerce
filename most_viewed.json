@@ -1,0 +1,24 @@
+{
+    "most_viewed":[
+        {
+            "img":"assets/goggle.jpg",
+            "name":"Sunglasses",
+            "price":"$235"
+    },
+    {
+        "img":"assets/headphones.png",
+        "name":"Headphones",
+        "price":"$220"
+    },
+    {
+        "img":"assets/sandals.jpg",
+        "name":"Sandals",
+        "price":"$835"
+    },
+    {
+        "img":"assets/watch.jpg",
+        "name":"Watch",
+        "price":"$500"
+    }
+]
+}

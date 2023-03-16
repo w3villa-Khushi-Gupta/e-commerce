@@ -1,0 +1,11 @@
+{
+    "shop_by_brand":[
+        {"brand":"assets/Sony-logo.png"},
+        {"brand":"assets/huawei_logo.jpeg"},
+        { "brand":"assets/htc_logo.jpg"},
+        {"brand":"assets/palm_logo.jpg"},
+        {"brand":"assets/nokia_logo.png"},
+        {"brand":"assets/samsung_logo.png"},
+        {"brand":"assets/mi_logo.png"}
+        ]
+}

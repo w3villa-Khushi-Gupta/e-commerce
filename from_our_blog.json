@@ -1,0 +1,35 @@
+{
+    "from_our_blog":[{
+        "date1":"2",
+        "date2":"Aug",
+        "img":"assets/guy1.jpg",
+        "user":"admin",
+        "comment":"31",
+        "viewers":"18937",
+        "heading":"Jornal Blog is her",
+        "content":"Some quick example text to build on the card title and make up the bulk of the card's contentuefhue loreorem ipsum dolor sit amet consectetur,adipisicing elit.Quasi similique perspiciatis laborum,repudiandae."
+
+    },
+    {
+        "date1":"2",
+        "date2":"Aug",
+        "img":"assets/i_g4.jpg",
+        "user":"admin",
+        "comment":"31",
+        "viewers":"18937",
+        "heading":"Best Leather Bag",
+        "content":"Some quick example text to build on the card title and make up the bulk of the card's contentuefhue loreorem ipsum dolor sit amet consectetur,adipisicing elit.Quasi similique perspiciatis laborum,repudiandae."
+    },
+    {
+        "date1":"2",
+        "date2":"Aug",
+        "img":"assets/guy2.jpg",
+        "user":"admin",
+        "comment":"31",
+        "viewers":"18937",
+        "heading":"Another Blog Post",
+        "content":"Some quick example text to build on the card title and make up the bulk of the card's contentuefhue loreorem ipsum dolor sit amet consectetur,adipisicing elit.Quasi similique perspiciatis laborum,repudiandae."
+        
+    }
+]
+}

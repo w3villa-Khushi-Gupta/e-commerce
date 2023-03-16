@@ -186,7 +186,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="searchbar" id="search_here">
                     <form class="d-flex" role="search">
-                        <button class="btn btn-primary dropdown-toggle " type="button" data-bs-toggle="dropdown"
+                        <div>
+                            <button class="btn btn-primary dropdown-toggle " type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             All
                         </button>
@@ -195,9 +196,18 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                        <input class=" form-control me-2" type="search" placeholder="Search here..."
-                            aria-label="Search">
-                        <button class="btn btn-primary" type="search"><i class="fas fa-search"></i></button>
+
+                        </div>
+                        <div class="searching">
+                            <input class=" form-control me-2" type="search" placeholder="Search here..."
+                            aria-label="Search" id="search-box">
+                            <ul id="search-results"></ul>
+
+                        </div>
+                        <div><button class="btn btn-primary" type="search"><i class="fas fa-search"></i></button>
+
+                        </div>
+
                     </form>
 
                 </div>
@@ -472,29 +482,7 @@
             <label class="btn btn-outline-primary" for="btnradio3">FASHION</label>
         </div>
 
-        <div class="row justify-content-around py-3">
-            <div class="cutouts" style="width: 20rem;">
-                <img src="assets/girl1.jpg" height="300" width="300">
-                    <a class="text-white  position-absolute" href="#">Go Somewhere</a>
-            </div>
-
-            <div class="cutouts" style="width: 20rem;">
-                <img src="assets/girl2.jpg" height="300" width="300">
-                    <a class="text-white  position-absolute" href="#">Go Somewhere</a>
-            </div>
-            <div class="cutouts" style="width: 20rem;">
-                <img src="assets/girl3.jpg" height="300" width="300">
-                    <a class="text-white  position-absolute" href="#">Go Somewhere</a>
-            </div>
-
-            <div class="cutouts" style="width: 20rem;">
-                <img src="assets/girl4.jpeg" height="300" width="300">
-                    <a class="text-white position-absolute" href="#">Go Somewhere</a>
-            </div>
-            <div class="cutouts" style="width: 20rem;">
-                <img src="assets/girl1.jpg" height="300" width="300">
-                    <a class="text-white  position-absolute" href="#">Go Somewhere</a>
-            </div>
+        <div class=" d-flex justify-content-around py-3 " id="why_buy" style="flex-wrap: wrap;">
         </div>
     </div>
     <!-- why buy from us -->
@@ -603,57 +591,9 @@
         <div class="underline"></div>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active d-flex justify-content-around">
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/samsung_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/palm_logo.jpg" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/mi_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/huawei_logo.jpeg" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/samsung_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/nokia_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/Sony-logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/mi_logo.png" class="img-thumbnail">
-                    </div>
+                <div class="carousel-item active d-flex justify-content-around" id="car-act">
                 </div>
-                <div class="carousel-item active d-flex justify-content-around">
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/samsung_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/palm_logo.jpg" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/mi_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/huawei_logo.jpeg" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/samsung_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/nokia_logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/Sony-logo.png" class="img-thumbnail">
-                    </div>
-                    <div class="brands col-1" style="width:10rem">
-                        <img src="assets/mi_logo.png" class="img-thumbnail">
-                    </div>
+                <div class="carousel-item active d-flex justify-content-around" id="car-inact">
                 </div>
             </div>
             <div class="carousel-indicators ">
@@ -685,34 +625,7 @@
         </p>
         <!-- head ends -->
         <!--image part starts-->
-        <div class="row justify-content-center">
-            <div class="col-1" style="width:10rem; height: 10rem;">
-                <img src="assets/i_g5.jpg" class="img-thumbnail" >
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g2.jpeg" class="img-thumbnail" >
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g3.jpeg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g4.jpg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g2.jpeg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g5.jpg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g6.jpg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem">
-                <img src="assets/i_g4.jpg" class="img-thumbnail">
-            </div>
-            <div class="col-1" style="width:10rem;height: 5rem;">
-                <img src="assets/i_g1.jpeg" class="img-thumbnail" >
-            </div>
+        <div class="d-flex justify-content-around" id="imp_gal" style="flex-wrap: wrap;">
         </div>
         <!-- image part ends -->
     </div>
@@ -745,110 +658,7 @@
         <!-- button part ends -->
 
         <!-- image part starts -->
-        <div class="row justify-content-center" id="latest_post">
-            <div class="col-4 " style="width: 30rem;">
-                <div class="card">
-                    <img class="card-img-top position-relative"
-                        src="assets/guy1.jpg" alt="Card image cap">
-                    <span class="date position-absolute">02<br>Aug</span>
-                    <div class="card-body text-center p-0">
-                        <div class="icons bg-muted d-flex py-2 justify-content-evenly">
-                            <div class="d-flex ">
-                                <i class="fa-solid fa-user"></i>
-                                <h6>admin</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-comment-dots"></i>
-                                <h6>31</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-eye"></i>
-                                <h6>18937</h6>
-                            </div>
-                        </div>
-                        <div class="card-title py-2">
-                            <h5>Journal Blog is here</h5>
-                        </div>
-                        <p class="content card-text">Some quick example text to build on the card title and make up <br>
-                            the
-                            bulk of
-                            the card's contentuefhuei<br>loreorem ipsum dolor sit amet consectetur, adipisicing
-                            elit.
-                            Quasi similique<br> perspiciatis laborum, repudiandae.
-                        </p>
-                        <a class="text-muted" href="#">Read More ➜</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4" style="width: 30rem;">
-                <div class="card">
-                    <img class="card-img-top" src="assets/i_g4.jpg"
-                        alt="Card image cap">
-                    <span class="date position-absolute">02<br>Aug</span>
-                    <div class="card-body text-center p-0">
-                        <div class="icons d-flex py-2 justify-content-evenly ">
-                            <div class="d-flex">
-                                <i class="fa-solid fa-user"></i>
-                                <h6>admin</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-comment-dots"></i>
-                                <h6>31</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-eye"></i>
-                                <h6>18937</h6>
-                            </div>
-                        </div>
-                        <div class="card-title p-2">
-                            <h5>Best Leather Bag</h5>
-                        </div>
-                        <p class="content card-text">Some quick example text to build on the card title and make up <br>
-                            the
-                            bulk of
-                            the card's contentuefhuei<br>loreorem ipsum dolor sit amet consectetur, adipisicing
-                            elit.
-                            Quasi similique<br> perspiciatis laborum, repudiandae.
-                        </p>
-                        <a class="text-muted" href="#">Read More ➜</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 " style="width: 30rem;">
-                <div class="card ">
-                    <img class="card-img-top" src="assets/guy2.jpg"
-                        alt="Card image cap">
-                    <span class="date position-absolute">02<br>Aug</span>
-
-                    <div class="card-body text-center p-0">
-                        <div class="icons d-flex py-2 justify-content-evenly">
-                            <div class="d-flex">
-                                <i class="fa-solid fa-user"></i>
-                                <h6>admin</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-comment-dots"></i>
-                                <h6>31</h6>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-eye"></i>
-                                <h6>18937</h6>
-                            </div>
-                        </div>
-                        <div class="card-title py-2">
-                            <h5>Another log Post</h5>
-                        </div>
-                        <p class="content card-text">Some quick example text to build on the card title and make up <br>
-                            the
-                            bulk of
-                            the card's contentuefhuei<br>loreorem ipsum dolor sit amet consectetur, adipisicing
-                            elit.
-                            Quasi similique imilique, <br>perspiciatis laborum, repudiandae.
-                        </p>
-                        <a class="text-muted" href="#">Read More ➜</a>
-                    </div>
-                </div>
-            </div>
+        <div class="d-flex justify-content-around" id="latest_post">
         </div>
         <!-- image part ends -->
     </div>
@@ -864,60 +674,8 @@
             What are people saying about us?
         </h1>
         <!-- head ends -->
-        <div class="row justify-content-center py-3">
-            <div class="col-3" style="width: 30rem;">
-                <div class="card">
-                    <div class="card-img-top text-center">
-                        <i class="fa-solid fa-quote-left comma"></i>
-                    </div>
-                    <div class="card-body">
-                        <p class="text-center">
-                            molestiae consectetur doloribus. Expedita sit et quae ipsa aspernatur, vel nihil. Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos, itaque voluptatum labore
-                            dolores tempora quis ea corrupti, ratione, molestiae consectetur doloribus. Expedita sit et
-                            quae ipsa aspernatur, vel nihil
-                        </p>
-                        <h6 class="text-center">
-                            -charliebalti
-                        </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3" style="width: 30rem;">
-                <div class="card">
-                    <div class="card-img-top text-center">
-                        <i class="fa-solid fa-quote-left comma"></i>
-                    </div>
-                    <div class="card-body">
-                        <p class="text-center">
-                            molestiae consectetur doloribus. Expedita sit et quae ipsa aspernatur, vel nihil. Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos, itaque voluptatum labore
-                            dolores tempora quis ea corrupti, ratione, molestiae consectetur doloribus. Expedita sit et
-                            quae ipsa aspernatur, vel nihil
-                        </p>
-                        <h6 class="text-center">
-                            -charliebalti
-                        </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3" style="width: 30rem;">
-                <div class="card">
-                    <div class="card-img-top text-center">
-                        <i class="fa-solid fa-quote-left comma"></i>
-                    </div>
-                    <div class="card-body">
-                        <p class="text-center">
-                            labore dolores tempora quis ea corrupti, ratione, molestiae consectetur doloribus. Expedita
-                            sit et quae ipsa asp jsjidjidjsxmm mkakkxank ernatur, vel nihil. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            molestiae consectetur doloribus. Expedita sit et quae ipsa aspernatur, vel nihil
-                        </p>
-                        <h6 class="text-center">
-                            -charliebalti
-                        </h6>
-                    </div>
-                </div>
-            </div>
+        <div class="underline"></div>
+        <div class="d-flex justify-content-evenly py-3" id="people">
         </div>
     </div>
     <!-- what are people saying about us-ends -->
@@ -931,66 +689,7 @@
             Most Viewed
         </h1>
         <div class="underline mx-0"></div>
-        <div class="row d-flex justify-content-between">
-            <div class="col-3" style="width: 25rem;">
-                <div class="item d-flex p-2 bg-white">
-                    <img src="assets/goggle.jpg" height="100" width="100" />
-                    <div class="item-body">
-                        <h4>Sport watch</h4>
-                        <h6>$235</h6>
-                        <div class="icons d-flex justify-content-evenly">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3" style="width: 25rem;">
-                <div class="item d-flex p-2 bg-white">
-                    <img src="assets/headphones.png" height="100" width="100" />
-                    <div class="item-body">
-                        <h4>Sport watch</h4>
-                        <h6>$235</h6>
-                        <div class="icons d-flex justify-content-evenly">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-3" style="width: 25rem;">
-                <div class="item d-flex p-2 bg-white">
-                    <img src="assets/sandals.jpg" height="100" width="100" />
-                    <div class="item-body">
-                        <h4>Sport watch</h4>
-                        <h6>$235</h6>
-                        <div class="icons d-flex justify-content-evenly">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-3" style="width: 25rem;">
-                <div class="item d-flex p-2 bg-white">
-                    <img src="assets/watch.jpg" height="100" width="100" />
-                    <div class="item-body">
-                        <h4>Sport watch</h4>
-                        <h6>$235</h6>
-                        <div class="icons d-flex justify-content-evenly">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="d-flex justify-content-between" id="most_viewed">
         </div>
     </div>
     <!-- most viewed section ends -->
