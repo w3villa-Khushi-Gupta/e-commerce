@@ -1,6 +1,6 @@
 {
     "products_update": [
-        {
+        {   "id":1,
             "img": "assets/headphones.png",
             "label": "Custom Labels",
             "percentage":true,
@@ -13,7 +13,7 @@
             "price": "$999.0",
             "strikethrough": "$3299.0"
         },
-        {
+        {   "id":2,
             "img": "assets/sandals.jpg",
             "label": "2-3 Days",
             "percentage": false,
@@ -27,7 +27,7 @@
             "price": "$425.0",
             "strikethrough": "0.00"
         },
-        {
+        {   "id":3,
             "img": "assets/tv_set.jpg",
             "label": "Pre-Order",
             "percentage": false,
@@ -41,7 +41,7 @@
             "price": "$0.0",
             "strikethrough": "0.00"
         },
-        {
+        {   "id":4,
             "img": "assets/camera.jpg",
             "label": "Pre-Order",
             "percentage": true,

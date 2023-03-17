@@ -67,11 +67,12 @@ span{
     padding: 10px;
    
 }
-/* .dropdown-menu[data-bs-popper] {
-    top: 60%;
-    left: 368px;
-    margin-top: var(--bs-dropdown-spacer);
-} */
+#disp_cart{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
 /* *************Navbar 2***************** */
 
 /* *************Navbar 3***************** */

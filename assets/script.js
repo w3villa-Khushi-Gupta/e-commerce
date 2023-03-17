@@ -20,6 +20,12 @@ searchBox.addEventListener('input', function(event) {
     }
 })
 
+//modal_to_display_cart
+function modal(){
+  let window=document.getElementById("disp_cart");
+    window.style.display="block"
+}
+
 
 // why_buy_from_us
 fetch("why_buy_from_us.json")
@@ -38,9 +44,6 @@ fetch("why_buy_from_us.json")
             x.appendChild(update)
         }
 })
-
-
-
 
 
 // Featured Products Section
@@ -79,7 +82,7 @@ fetch("products_update.json")
                   <div class="quantity d-flex">
                       <input name="quantity" type="number" class="quantity_input" min="1" max="10" value="1" style="width:3rem">
                   </div>
-                  <button class="btn btn-primary">ADD TO CART</button>
+                  <button class="btn btn-primary" onclick="add_to_cart(event,${product.id})">ADD TO CART</button>
                   <div class="emo d-flex ">
                       <i class="fa-regular fa-heart px-2"></i>
                       <i class="fa-solid fa-right-left"></i>
@@ -101,8 +104,17 @@ fetch("products_update.json")
         }
 
     })
+    async function add_to_cart(event,productId){
+        event.preventDefault();
+        console.log("Hellooooooo")
+    const response = await fetch('products_update.json');
+    const data = await response.json();
 
-
+    const product = data.products_update.find(product => products_update.id === productId);
+    let cart_con=document.getElementById("cart_content");
+    cart_con.innerHTML=`hie`;
+}
+    
 
 // New in fashion section
 
@@ -152,7 +164,7 @@ fetch("shop_by_brand.json")
     for( let i=0;i<tempS.shop_by_brand.length;i++){
         const product=tempS.shop_by_brand[i];
         const update=document.createElement("div");
-        update.innerHTML=`<div class="brands col-1" style="width:10rem">
+        update.innerHTML=`<div class="brands " style="width:10rem">
         <img src="${product.brand}" class="img-thumbnail">
     </div>`
     x.appendChild(update);
@@ -161,7 +173,7 @@ fetch("shop_by_brand.json")
     for( let i=0;i<tempS.shop_by_brand.length;i++){
         const product=tempS.shop_by_brand[i];
         const update=document.createElement("div");
-        update.innerHTML=`<div class="brands col-1" style="width:10rem">
+        update.innerHTML=`<div class="brands " style="width:10rem">
         <img src="${product.brand}" class="img-thumbnail">
     </div>`
     y.appendChild(update)
@@ -178,7 +190,7 @@ fetch("improved_gallery.json")
     for(let i=0;i<tempI.improved_gallery.length;i++){
         const product=tempI.improved_gallery[i];
         const update=document.createElement("div");
-        update.innerHTML=`<div class="col-1" style="width:10rem; height: 10rem;" style>
+        update.innerHTML=`<div style="width:10rem; height: 10rem;">
         <img src="${product.gal}" class="img-thumbnail" >
     </div>`
         x.appendChild(update);
@@ -193,9 +205,9 @@ fetch("from_our_blog.json")
     for(let i=0;i<tempF.from_our_blog.length;i++){
         const product=tempF.from_our_blog[i];
         const update=document.createElement("div")
-        update.innerHTML=`<div class="col-4 " style="width: 30rem;">
+        update.innerHTML=`<div style="width: 30rem;">
         <div class="card">
-            <img class="card-img-top position-relative"
+            <img class="card-img-top "
                 src="${product.img}" alt="Card image cap">
             <span class="date position-absolute">${product.date1}<br>${product.date2}</span>
             <div class="card-body text-center p-0">
@@ -235,7 +247,7 @@ fetch("what_people_are_saying.json")
     for(let i=0;i<tempP.what_people_are_saying.length;i++){
         const product=tempP.what_people_are_saying[i];
         const update=document.createElement("div");
-        update.innerHTML=`<div class="col-3" style="width: 30rem;">
+        update.innerHTML=`<div  style="width: 30rem;">
         <div class="card">
             <div class="card-img-top text-center">
                 <i class="fa-solid fa-quote-left comma"></i>
