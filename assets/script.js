@@ -23,16 +23,50 @@ searchBox.addEventListener('input', function(event) {
 //modal_to_display_cart
 function modal(){
   let window=document.getElementById("disp_cart");
-    window.style.display="block"
+    window.style.display="block";
+    let but=document.getElementById("cross");
+    but.onclick=function(){
+        window.style.display="none";
+    }
+}
+
+// login and register
+// Get the modals
+var loginModal = document.getElementById("login-modal");
+var registerModal = document.getElementById("register-modal");
+
+// When the user clicks on the button, open the modal
+function openModal(modalId) {
+  if (modalId === 'login-modal') {
+    loginModal.style.display = "block";
+  } else if (modalId === 'register-modal') {
+    registerModal.style.display = "block";
+  }
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal(modalId) {
+  if (modalId === 'login-modal') {
+    loginModal.style.display = "none";
+  } else if (modalId === 'register-modal') {
+    registerModal.style.display = "none";
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  } else if (event.target == registerModal) {
+    registerModal.style.display = "none";
+  }
 }
 
 
 // why_buy_from_us
 fetch("why_buy_from_us.json")
     .then(response => response.json())
-
     .then(tempW=>{
-        console.log("helloooooooooooooooooooooo")
         const x= document.getElementById("why_buy");
         for (let i=0;i<tempW.why_buy_from_us.length;i++){
             const card=tempW.why_buy_from_us[i];
@@ -104,15 +138,25 @@ fetch("products_update.json")
         }
 
     })
+    
     async function add_to_cart(event,productId){
         event.preventDefault();
-        console.log("Hellooooooo")
     const response = await fetch('products_update.json');
     const data = await response.json();
+        const x=document.getElementById("disp_cart")
+    const product = data.products_update.find(product => product.id === productId);
+    console.log(product.name);
+    let cart_con=document.createElement("div");
+    cart_con.innerHTML+=`    <div class="cart_item d-flex justify-content-around">
+    <div class="image"><img src="${product.img}" height=100 width=100></div>
+    <div class="heading">
+        <h5>${product.name}</h5>
+        <h6>${product.price}</h6>
+    </div>
 
-    const product = data.products_update.find(product => products_update.id === productId);
-    let cart_con=document.getElementById("cart_content");
-    cart_con.innerHTML=`hie`;
+</div>
+`; 
+x.appendChild(cart_con);
 }
     
 
