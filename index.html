@@ -275,26 +275,27 @@
     <!-- login and register -->
     <div id="login-modal" class="modal">
         <div class="modal-content">
-          <h2>Login</h2>
-          <form>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button type="submit">Submit</button>
-          </form>
+            <button class="close">&times;</button>
+            <h2>Login</h2>
+            <form id="login_form">
+                <input type="text" placeholder="Email" id="email_login">
+                <input type="password" placeholder="Password" id="pass_login">
+                <button type="submit" id="verify">Submit</button>
+            </form>
         </div>
-      </div>
-      
-      <div id="register-modal" class="modal">
+    </div>
+
+    <div id="register-modal" class="modal">
         <div class="modal-content">
-          <h2>Register</h2>
-          <form>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Confirm Password">
-            <button type="submit">Submit</button>
-          </form>
+            <button class="close">&times;</button>
+            <h2>Register</h2>
+                <input type="text" placeholder="Email" id="email_register">
+                <input type="password" placeholder="Password" id="password_register">
+                <input type="password" placeholder="Confirm Password" id="confirm_password">
+                <button type="submit" id="submit">Submit</button>
+
         </div>
-      </div>
+    </div>
     <!-- login and register -->
 
     <!-- NAVBAR 3 -->
