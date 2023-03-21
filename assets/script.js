@@ -1,6 +1,7 @@
 // Search bar
 const searchBox = document.getElementById('search-box');
 const searchResults = document.getElementById('search-results');
+let quantity;
 
 searchBox.addEventListener('input', function (event) {
     const searchTerm = event.target.value.toLowerCase();
@@ -12,9 +13,10 @@ searchBox.addEventListener('input', function (event) {
             .then(data => {
                 const matches = data.products_update.filter(item => item.name.toLowerCase().includes(searchTerm));
                 matches.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerText = item.name;
-                    searchResults.appendChild(li);
+                    const link = document.createElement('a');
+                    link.style.display = "block"
+                    link.innerHTML = `<a href="#${item.name}">${item.name}</a>`
+                    searchResults.appendChild(link);
                 });
             });
     }
@@ -41,9 +43,9 @@ const submit_btn = document.getElementById("submit");
 const verify_btn = document.getElementById("verify")
 
 const user_arr = [];
-const temp_arr = JSON.parse(localStorage.getItem("users"));
+const temp_arr = [];
 
-// When the user clicks on the button, open the modal
+// open the modal
 function openModal(modalId) {
     if (modalId === 'login-modal') {
         loginModal.style.display = "block";
@@ -51,7 +53,7 @@ function openModal(modalId) {
         registerModal.style.display = "block";
     }
 }
-// Add event listeners to the close buttons
+// close button
 loginCloseButton.addEventListener('click', () => {
     loginModal.style.display = 'none';
 });
@@ -68,22 +70,14 @@ window.onclick = function (event) {
     }
 }
 // ???????????????????? fetching data ????????????????????????????
-
+// register page
 submit_btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-
     const userId = Date.now() + Math.floor(Math.random() * 1000);
-
     let user_name = document.getElementById("email_register").value;
     let pass = document.getElementById("password_register").value;
     let c_pass = document.getElementById("confirm_password").value;
-
-
-    if (pass !== c_pass) {
-        alert("Confirmation password do not match!  Try again.");
-        return;
-    }
 
     const userData = {
         id: userId,
@@ -91,28 +85,32 @@ submit_btn.addEventListener('click', (e) => {
         password: pass
     };
 
-    for (let i = 0; i < temp_arr.length; i++) {
-        if (temp_arr[i].username === user_name) {
-            alert("User already exists!")
-            return;
-        }
-        else {
-            user_arr.push(userData);
-            localStorage.setItem("users", JSON.stringify(user_arr));
-            alert("Successfully Registered.");
-            registerModal.style.display = 'none';
-            return;
-        }
-
+    if (pass !== c_pass) {
+        alert("Confirmation password do not match!  Try again.");
+        return;
     }
+    const temp_arr = JSON.parse(localStorage.getItem("users"));
 
-
+    if (temp_arr) {
+        for (let i = 0; i < temp_arr.length; i++) {
+            if (temp_arr[i].username === user_name) {
+                alert("User already exists!")
+                return;
+            }
+        }
+    }
+    user_arr.push(userData);
+    localStorage.setItem("users", JSON.stringify(user_arr));
+    alert("Successfully Registered.");
+    registerModal.style.display = 'none';
 })
-
+// login page
 verify_btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    let login=document.getElementById("login_form");
+    const temp_arr = JSON.parse(localStorage.getItem("users"));
+
+    let login = document.getElementById("login_form");
     let user_login = document.getElementById("email_login");
     let pass_login = document.getElementById("pass_login");
 
@@ -120,16 +118,18 @@ verify_btn.addEventListener('click', (e) => {
         const stored_user = temp_arr[i].username;
         const stored_pass = temp_arr[i].password;
 
-        if (stored_user !== user_login.value){
+        if (stored_user !== user_login.value) {
             alert("User does'nt exist");
-            return;}
-        else if (stored_pass !== pass_login.value){
+            return;
+        }
+        else if (stored_pass !== pass_login.value) {
             alert("Invalid Password");
-        return;}
+            return;
+        }
         else {
             login.reset();
             alert("Successfully Logged In");
-            loginModal.style.display = "none"; 
+            loginModal.style.display = "none";
             return;
         }
 
@@ -167,7 +167,8 @@ fetch("products_update.json")
         for (let i = 0; i < tempA.products_update.length; i++) {
             const product = tempA.products_update[i];
             const update = document.createElement("div")
-            update.innerHTML = `<div class="card  px-0 d-flex" style="width: 20rem;" id="hell">
+            update.style.overflow = "hidden";
+            update.innerHTML = `<div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
               <img class="card-img-top position-relative" src="${product.img}" alt="Card image cap" height="300">
               <span class="position-absolute  pre_order">${product.label}</span>
                     ${product.percentage ? per_tag : ""}
@@ -183,11 +184,11 @@ fetch("products_update.json")
               </div>
               <div class="headphones p-2">
                   <h5 class="card-title">${product.name}</h5>
-                      <p class="card-text">${product.price} <s> ${product.strikethrough}</s></p>
+                      <p class="card-text">$${product.price} <s> ${product.strikethrough}</s></p>
               </div>
               <div class="action d-flex justify-content-between p-2">
                   <div class="quantity d-flex">
-                      <input name="quantity" type="number" class="quantity_input" min="1" max="10" value="1" style="width:3rem">
+                      <input name="quantity" type="number" class="quantity_input" min="1" max="10" value="1" style="width:3rem" >
                   </div>
                   <button class="btn btn-primary" onclick="add_to_cart(event,${product.id})">ADD TO CART</button>
                   <div class="emo d-flex ">
@@ -210,26 +211,45 @@ fetch("products_update.json")
             x.appendChild(update);
         }
 
+        var quantityInput = document.getElementsByClassName('quantity_input')
+        for (input of quantityInput) {
+            input.addEventListener('change', quantityChanged)
+        }
     })
+
+function quantityChanged(event) {
+    let input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    quantity = input.value;
+}
 
 async function add_to_cart(event, productId) {
     event.preventDefault();
     const response = await fetch('products_update.json');
     const data = await response.json();
     const x = document.getElementById("disp_cart")
+    // let quantity=document.getElementById("quantity").value;
+
+    // console.log(quantity);
     const product = data.products_update.find(product => product.id === productId);
     console.log(product.name);
     let cart_con = document.createElement("div");
-    cart_con.innerHTML += `    <div class="cart_item d-flex justify-content-around">
+    cart_con.innerHTML += `<div class="cart_item d-flex justify-content-around">
     <div class="image"><img src="${product.img}" height=100 width=100></div>
     <div class="heading">
         <h5>${product.name}</h5>
         <h6>${product.price}</h6>
+        <h6>Quantity:1*${quantity}=${quantity}</h6>
+        <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>
     </div>
 
 </div>
+<hr>
 `;
     x.appendChild(cart_con);
+    // quantity = 1;
 }
 
 

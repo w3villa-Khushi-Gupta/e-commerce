@@ -10,7 +10,7 @@
             "brand": "Erickson",
             "model": "Model 519",
             "name": "Headphones",
-            "price": "$999.0",
+            "price": "999.0",
             "strikethrough": "$3299.0"
         },
         {   "id":2,
@@ -24,7 +24,7 @@
             "brand": "NY Fashion",
             "model": "Model 206",
             "name": "Women's Maria Pump",
-            "price": "$425.0",
+            "price": "425.0",
             "strikethrough": "0.00"
         },
         {   "id":3,
@@ -38,7 +38,7 @@
             "brand": "Erickson",
             "model": "Model 206",
             "name": "Toshiba 5009 Smart TV",
-            "price": "$0.0",
+            "price": "780.0",
             "strikethrough": "0.00"
         },
         {   "id":4,
@@ -49,10 +49,10 @@
 
             "sale": false,
             "free":false,
-            "brand": "Leica Digital Camera",
+            "brand": "Leica ",
             "model": "Model 206",
-            "name": "Headphones",
-            "price": "$425.0",
+            "name": "Digital Camera",
+            "price": "425.0",
             "strikethrough": "0.00"
         }
     ]
