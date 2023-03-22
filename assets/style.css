@@ -19,6 +19,9 @@ button{
     border: none;
     background-color: inherit;
 }
+hr{
+    margin: 0px;
+}
 .underline{
     width: 70px;
     height: 4px;
@@ -37,6 +40,22 @@ button{
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.point{
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    top: 25px;
+    left: 65px;
+    display: none;
+}
+
+/* bootstrap-class overiding */
+.btn{--bs-btn-border-radius: none;}
+.form-control {border-radius: 0;}
+/* bootstrap-class overiding */
+
+
+
 /* *************Common Classes*************** */
 
 /* *************Navbar 2 **********************/
@@ -77,6 +96,7 @@ button{
     z-index: 1;
     background-color:white;
 }
+.all , .search{border-radius:2px;}
 /* *************Navbar 2***************** */
 
 /* *************Navbar 3***************** */
@@ -84,12 +104,14 @@ button{
     color: white;
     font-size: 20px;
     padding: 15px;
+    margin: 0px 0px;
 
 }
 #all_dep li h6{
     color: white;
     font-size: 20px;
     padding: 15px;
+    margin: 0px 0px;
 }
 /* *************Navbar 3***************** */
 
@@ -137,6 +159,15 @@ button{
 
     
 }    
+.card_image{
+    width: 100%;
+    height: auto;
+}
+.card_image img{
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* *************card**************** */
 /* *************Section 1**************** */
@@ -269,6 +300,7 @@ input[type=number]::-webkit-outer-spin-button
     font-weight: bold;
     color: gray;
 }
+
 
 .product_list{
     display: flex;
@@ -417,14 +449,6 @@ input[type=number]::-webkit-outer-spin-button
   }
   /* *************Login & Registration*************** */
 
-/* .card_image{
-    width: 100%;
-    height: auto;
-}
-.card_image img{
-    max-width: 100;
-    height: auto;
-} */
 /* *************For Responsivness*************** */
 
 @media screen and (max-width:2000px) {
@@ -433,17 +457,24 @@ input[type=number]::-webkit-outer-spin-button
     }
 
 }
-/* @media screen and (max-width:1670px) {
+@media screen and (max-width:1670px) {
     .side_card{
         display: flex;
         margin-top: 20px;
     }
-    .sect1{
+    /* .sect1{
         display: flex;
         flex-direction: column;
-    }
-} */
+    } */
+}
  
+@media screen and (max-width:820px) {
+    .side_card{
+        display: block;
+        /* padding-left: 50px; */
+    }
+
+}
 
 
 @media screen and (max-width:991px) {
@@ -483,9 +514,19 @@ input[type=number]::-webkit-outer-spin-button
 
 @media screen and (max-width:526px) {
     .sec13{
-        display: block;
+        display: block !important;
+    }
+    .side_card{
+        padding-left: 50px;
+    }
+
+}
+@media screen and (max-width:450px) {
+    .side_card{
+        padding-left: 10px;
     }
 }
+
 /* *************For Responsivness*************** */
 
 /* side_card justify-content-evenly */

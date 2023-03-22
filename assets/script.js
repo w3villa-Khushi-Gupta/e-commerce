@@ -190,10 +190,10 @@ fetch("products_update.json")
                   <div class="quantity d-flex">
                       <input name="quantity" type="number" class="quantity_input" min="1" max="10" value="1" style="width:3rem" >
                   </div>
-                  <button class="btn btn-primary" onclick="add_to_cart(event,${product.id})">ADD TO CART</button>
+                  <button class="btn btn-primary " style="border-radius:5px" onclick="add_to_cart(event,${product.id})">ADD TO CART</button>
                   <div class="emo d-flex ">
-                      <i class="fa-regular fa-heart px-2"></i>
-                      <i class="fa-solid fa-right-left"></i>
+                     <button><i class="fa-regular fa-heart mx-2"></i></button>
+                      <i class="fa-solid fa-right-left mx-2"></i>
                   </div>
               </div>
               <div class="xtra d-flex justify-content-between bg-light p-2">
@@ -275,15 +275,15 @@ fetch("new_in_fashion.json")
         ${product.top_brands ? per_tag : ""}
 
         <div class="headphones ">
-            <a class="card-title text-primary" href="#">${product.type}</a>
-            <p class="card-text">${product.price}</p>
+            <a class="card-title text-primary px-2" href="#">${product.type}</a>
+            <p class="card-text px-2">${product.price}</p>
         </div>
         <hr >
         <div class="action d-flex justify-content-around">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary my-2" style="border-radius:5px">ADD TO CART</button>
             <div class="emo d-flex ">
-                <i class="fa-regular fa-heart px-2"></i>
-                <i class="fa-solid fa-right-left"></i>
+                <i class="fa-regular fa-heart mx-2 my-3"></i>
+                <i class="fa-solid fa-right-left mx-2 my-3"></i>
             </div>
         </div>
     </div>`
@@ -347,8 +347,8 @@ fetch("from_our_blog.json")
             <img class="card-img-top "
                 src="${product.img}" alt="Card image cap">
             <span class="date position-absolute">${product.date1}<br>${product.date2}</span>
-            <div class="card-body text-center p-0">
-                <div class="icons bg-muted d-flex py-2 justify-content-evenly">
+            <div class="card-body text-center p-0 my-2">
+                <div class="icons bg-light d-flex py-2 justify-content-evenly">
                     <div class="d-flex ">
                         <i class="fa-solid fa-user"></i>
                         <h6>${product.user}</h6>
@@ -367,7 +367,7 @@ fetch("from_our_blog.json")
                 </div>
                 <p class="content card-text">${product.content}
                 </p>
-                <a class="text-muted" href="#">Read More ➜</a>
+                <a class="text-muted bg-light" href="#">Read More ➜</a>
             </div>
         </div>
     </div>
@@ -430,3 +430,12 @@ fetch("most_viewed.json")
             x.appendChild(update);
         }
     })
+function point(){
+    let pointer=document.getElementById("point");
+    pointer.style.display="block";
+}
+// function leavepoint(){
+//     let pointer=document.getElementById("point");
+//     pointer.style.display="none";
+
+// }

@@ -47,18 +47,18 @@
                 <div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link " href="#"><i class="fa-solid fa-house"></i>Home</a>
+                            <a class="nav-link " href="#"><i class="fa-solid fa-house mx-1"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-award"></i>About Us</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-award mx-1"></i>About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i>Contact</a>
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope mx-1"></i>Contact</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <i class="fa-sharp fa-regular fa-circle-question "></i>FAQ
+                                <i class="fa-sharp fa-regular fa-circle-question mx-1"></i>FAQ
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -102,7 +102,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <i class="fa-solid fa-user"></i><i class="fa-solid fa-bars"></i>More Menus
+                                <i class="fa-solid fa-user "></i><i class="fa-solid fa-bars mx-1"></i>More Menus
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">⚙ Settings</a></li>
@@ -110,7 +110,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-truck"></i>Delivery
+                            <a class="nav-link" href="#"><i class="fas fa-truck mx-1"></i>Delivery
                             </a>
                         </li>
                     </ul>
@@ -128,14 +128,14 @@
                 <div class="d-flex ">
                     <div class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user mx-1"></i>
                             Login
                         </a>
                     </div>
                     <div class="nav-item">
 
                         <a class="nav-link " href="#">
-                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-pen mx-1"></i>
                             Register
                         </a>
                     </div>
@@ -187,7 +187,7 @@
                 <div class="collapse navbar-collapse" id="searchbar" id="search_here">
                     <form class="d-flex" role="search">
                         <div>
-                            <button class="btn btn-primary dropdown-toggle " type="button" data-bs-toggle="dropdown"
+                            <button class="btn btn-primary dropdown-toggle all " type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 All
                             </button>
@@ -204,7 +204,7 @@
                             <ul id="search-results"></ul>
 
                         </div>
-                        <div><button class="btn btn-primary" type="search"><i class="fas fa-search"></i></button>
+                        <div><button class="btn btn-primary search" type="search"><i class="fas fa-search"></i></button>
 
                         </div>
 
@@ -234,10 +234,10 @@
                             </button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <button class="nav-link" onclick="openModal('register-modal')">
                                 <i class="far fa-heart"></i>
                                 <h6>Wishlist</h6>
-                            </a>
+                            </button>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -404,27 +404,27 @@
 
                 </div>
             </div>
-            <div class="/* side_card justify-content-evenly */
-            ">
-                <div class=" one">
-                    <div class="wearables d-flex bg-white px-0">
+            <div class="  col-3 side_card justify-content-evenly">
+            
+                <div class="one">
+                    <div class="wearables d-flex bg-white px-0" style="width: 25rem;">
                         <div class="wearables-body">
                             <h6>WEARABLES</h6>
                             <h4>Intelligent<br />& Durable<br />Besign</h4>
                         </div>
-                        <div>
+                        <div class="card_image">
                             <img src="assets/mobile_3.png" height="200" width="240" />
                         </div>
                     </div>
 
                 </div>
-                <div class=" two">
-                    <div class="wearables d-flex  bg-white px-0">
+                <div class="two">
+                    <div class="wearables d-flex  bg-white px-0" style="width: 25rem;">
                         <div class="wearables-body">
                             <h6>WEARABLES</h6>
                             <h4>Intelligent<br />& Durable<br />Besign</h4>
                         </div>
-                        <div>
+                        <div class="card_image">
                             <img src="assets/mobile_3.png" height="200" width="240" />
                         </div>
 
@@ -446,7 +446,7 @@
                 <div class="icon">
                     <i class="fa-solid fa-truck-fast"></i>
                 </div>
-                <div class="content">
+                <div class="content my-2">
                     <h5>Free Shipping</h6>
                         <h6>Free Delivery Over $100</h6>
                 </div>
@@ -455,7 +455,7 @@
                 <div class="icon">
                     <i class="fa-sharp fa-solid fa-arrow-rotate-left"></i>
                 </div>
-                <div class="content">
+                <div class="content my-2">
                     <h5>Free Shipping</h5>
                     <h6>Hassle Free Returns</h6>
                 </div>
@@ -464,7 +464,7 @@
                 <div class="icon">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <div class="content">
+                <div class="content my-2">
                     <h5>Secure Shopping</h5>
                     <h6>Best Security Features</h6>
                 </div>
@@ -475,7 +475,7 @@
                     <i class="fa-solid fa-cube"></i>
                 </div>
 
-                <div class="content">
+                <div class="content my-2">
                     <h5>Unlimited Blocks</h5>
                     <h6>Any content,any page</h6>
                 </div>
@@ -501,10 +501,14 @@
                     href="#">Learn more</a></span>
         </p>
 
-        <div class="d-flex justify-content-center py-3">
+        <div class="d-flex justify-content-center py-3 "style>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnradio1">TOP CATEGORIES</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked onclick="point()" >
+            <label class="btn btn-outline-primary position-relative" for="btnradio1">
+                TOP CATEGORIES
+                <div class="point bg-primary position-absolute" id="point"></div>
+
+            </label>
 
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
             <label class="btn btn-outline-primary" for="btnradio2">ELECTRONICS</label>
@@ -512,8 +516,8 @@
             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
             <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">FASHION</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio4">FASHION</label>
         </div>
 
         <div class=" d-flex justify-content-around py-3 " id="why_buy" style="flex-wrap: wrap;">
@@ -543,17 +547,17 @@
         <!--button part starts-->
         <div class="d-flex justify-content-center py-3">
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnradio1">TOP CATEGORIES</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked onclick="point()">
+            <label class="btn btn-outline-primary" for="btnradio5">TOP CATEGORIES</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio2">ELECTRONICS</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio6">ELECTRONICS</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio7">BEAUTY</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">FASHION</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio8">FASHION</label>
         </div>
 
         <!-- button part ends -->
@@ -563,7 +567,7 @@
         </div>
         <!-- image part ends -->
         <div class="search_products text-center py-3">
-            <button class="btn btn-primary " href="#">Search all products →</button>
+            <button class="btn btn-primary " style="border-radius:5px" href="#">Search all products →</button>
         </div>
 
     </div>
@@ -592,18 +596,18 @@
         <!-- image part starts -->
         <div class="hero d-flex justify-content-center">
             <div class="card bg-secondary p-2" style="width: 18rem;">
-                <h1>
+                <h2>
                     Fashion
-                </h1>
+                </h2>
                 <div class="underline mx-0"></div>
                 <img class="py-2" src="assets/beauty.jpg" height="300">
                 <a href="#" class="text-light">Accessories<br>Dresses<br>Pants<br>T-Shirts</a>
                 <a href="#">See all in Fashion</a>
             </div>
             <div class="other_cards p-2">
-                <h1>
+                <h2>
                     New in Fashion
-                </h1>
+                </h2>
                 <div class="underline mx-0"></div>
                 <div class="d-flex justify-content-center" id="other_cards" style="flex-wrap: wrap;"></div>
             </div>
@@ -683,11 +687,11 @@
 
         <!-- button part starts -->
         <div class="d-flex justify-content-center py-3">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio9">BEAUTY</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">FASHION</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio10">FASHION</label>
         </div>
         <!-- button part ends -->
 
@@ -790,7 +794,7 @@
                     Newsletter
                 </h4>
                 <div class="underline mx-0"></div>
-                <p>
+                <p style="font-size: 20px;">
                     Stay up date with news and<br /> by signing up for our<br /> newsletter.
                 </p>
                 <div class="input-group">
@@ -816,18 +820,21 @@
 
     <!--********************** SECTION 13 *************************-->
     <!-- footer starts -->
-    <div class="container-fluid  bg-secondary d-flex justify-content-between plr sec13">
-        <div class="left">
-            <p>Copyright @2014,Your store, All rights Reserved</p>
+    <div class="container-fluid  bg-secondary  plr " >
+        <div class=" sec13 d-flex justify-content-between">
+            <div class="left">
+                <p style="margin-top: 10px; font-size: 20px;">Copyright @2014,Your store, All rights Reserved</p>
+            </div>
+            <div class="right d-flex justify-content-evenly" style="flex-wrap:wrap">
+                <i class="fa-brands fa-cc-visa p-2"></i>
+                <i class="fa-brands fa-cc-paypal p-2"></i>
+                <i class="fa-brands fa-cc-discover p-2"></i>
+                <i class="fa-brands fa-cc-amex p-2"></i>
+                <i class="fa-brands fa-cc-stripe p-2"></i>
+            </div>
         </div>
-        <div class="right d-flex justify-content-evenly" style="flex-wrap:wrap">
-            <i class="fa-brands fa-cc-visa p-2"></i>
-            <i class="fa-brands fa-cc-paypal p-2"></i>
-            <i class="fa-brands fa-cc-discover p-2"></i>
-            <i class="fa-brands fa-cc-amex p-2"></i>
-            <i class="fa-brands fa-cc-stripe p-2"></i>
+    
         </div>
-    </div>
     <!-- footer ends -->
 
     <!--********************** SECTION 13 *************************-->
