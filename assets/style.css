@@ -137,6 +137,15 @@ button{
 
     
 }    
+.card_image{
+    width: 100%;
+    height: auto;
+}
+.card_image img{
+    max-width: 100;
+    height: auto;
+}
+
 
 /* *************card**************** */
 /* *************Section 1**************** */
@@ -427,6 +436,13 @@ input[type=number]::-webkit-outer-spin-button
     }
 
 }
+@media screen and (max-width:1670px) {
+    .side_card{
+        display: flex;
+        margin-top: 20px;
+    }
+}
+
 @media screen and (max-width:991px) {
     .nb1{
         display: none;
