@@ -417,8 +417,14 @@ input[type=number]::-webkit-outer-spin-button
   }
   /* *************Login & Registration*************** */
 
-
-
+/* .card_image{
+    width: 100%;
+    height: auto;
+}
+.card_image img{
+    max-width: 100;
+    height: auto;
+} */
 /* *************For Responsivness*************** */
 
 @media screen and (max-width:2000px) {
@@ -427,6 +433,19 @@ input[type=number]::-webkit-outer-spin-button
     }
 
 }
+/* @media screen and (max-width:1670px) {
+    .side_card{
+        display: flex;
+        margin-top: 20px;
+    }
+    .sect1{
+        display: flex;
+        flex-direction: column;
+    }
+} */
+ 
+
+
 @media screen and (max-width:991px) {
     .nb1{
         display: none;
@@ -440,7 +459,10 @@ input[type=number]::-webkit-outer-spin-button
     .hide .left{
         display: flex;
     }
-
+    /* .wearables{
+        box-shadow: none;
+    } */
+    
 }
 
 @media screen and (max-width:750px) {
@@ -465,3 +487,5 @@ input[type=number]::-webkit-outer-spin-button
     }
 }
 /* *************For Responsivness*************** */
+
+/* side_card justify-content-evenly */

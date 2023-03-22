@@ -240,7 +240,7 @@ async function add_to_cart(event, productId) {
     <div class="image"><img src="${product.img}" height=100 width=100></div>
     <div class="heading">
         <h5>${product.name}</h5>
-        <h6>${product.price}</h6>
+        <h6>$${product.price}</h6>
         <h6>Quantity:1*${quantity}=${quantity}</h6>
         <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>
     </div>
