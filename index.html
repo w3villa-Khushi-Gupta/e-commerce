@@ -222,22 +222,35 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="icons">
                         <li class="nav-item">
-                            <button class="nav-link" onclick="openModal('login-modal')">
+                            <button class="nav-link" onclick="openModal('login-modal')" id="login">
                                 <i class="fas fa-user"></i>
                                 <h6>Login</h6>
                             </button>
+                            <button class="nav-link" id="user">
+                                <i class="fas fa-user"></i>
+                                <h6 id="welcome"></h6>
+                            </button>
+
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" onclick="openModal('register-modal')">
+                            <button class="nav-link" onclick="openModal('register-modal')" id="register">
                                 <i class="fa-solid fa-pencil"></i>
                                 <h6>Register</h6>
                             </button>
+                            <button class="nav-link" onclick="myclose()" id="logout">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <h6>Logout</h6>
+                            </button>
+
+
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" onclick="openModal('register-modal')">
-                                <i class="far fa-heart"></i>
-                                <h6>Wishlist</h6>
-                            </button>
+                            <!-- <a href="assets/wishlist.html"> -->
+                                <button class="nav-link" onclick="modal('wishlist')">
+                                    <i class="far fa-heart"></i>
+                                    <h6>Wishlist</h6>
+                                </button>
+                            <!-- </a> -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -255,8 +268,8 @@
                 </button>
                 <div class="collapse navbar-collapse">
                     <div class="d-flex justify-content-between" id="cart">
-                        <h6 class="nav-item">0 item(s)-$0.00</h6>
-                        <button class="btn cart" onclick="modal()">
+                        <h6 class="nav-item" id="cartEnquiry">0 item(s)-$0.00</h6>
+                        <button class="btn cart" onclick="modal('cart')">
                             <i class="fa-solid fa-cart-shopping bg-primary cartA"></i>
                         </button>
                     </div>
@@ -267,11 +280,20 @@
     </nav>
     <!-- NAVBAR 2 -->
     <!-- cart_window -->
-    <div class="disp_cart" id="disp_cart" style="width: 35rem;right: 0;height: 40rem;">
-        <button class="position-absolute " id="cross" style="right:0; border: none; background-color: white;">X</button>
+    <div class="disp_cart" id="disp_cart" style="width: 30rem;right: 0;height: auto;">
+        <button class="position-absolute" id="crossC"
+            style="right:2px; border: none; background-color: white;">X</button>
         <h1 class="text-center py-2">Products in cart</h1>
     </div>
     <!-- cart_window -->
+    <!-- wishlist_window -->
+    <div class="wishlist" id="wishlist" style="width: 30rem;right: 0;height: auto;">
+        <button class="position-absolute" id="crossW"
+            style="right: 2px;; border: none; background-color: white;">X</button>
+        <h1 class="text-center py-2">Products in Wishlist</h1>
+    </div>
+    <!-- wishlist_window -->
+
     <!-- login and register -->
     <div id="login-modal" class="modal">
         <div class="modal-content">
@@ -405,7 +427,7 @@
                 </div>
             </div>
             <div class="  col-3 side_card justify-content-evenly">
-            
+
                 <div class="one">
                     <div class="wearables d-flex bg-white px-0" style="width: 25rem;">
                         <div class="wearables-body">
@@ -501,9 +523,10 @@
                     href="#">Learn more</a></span>
         </p>
 
-        <div class="d-flex justify-content-center py-3 "style>
+        <div class="d-flex justify-content-center py-3 " style="flex-wrap:wrap">
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked onclick="point()" >
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
+                onclick="point()">
             <label class="btn btn-outline-primary position-relative" for="btnradio1">
                 TOP CATEGORIES
                 <div class="point bg-primary position-absolute" id="point"></div>
@@ -545,9 +568,10 @@
         <!-- head part ends -->
 
         <!--button part starts-->
-        <div class="d-flex justify-content-center py-3">
+        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked onclick="point()">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked
+                onclick="point()">
             <label class="btn btn-outline-primary" for="btnradio5">TOP CATEGORIES</label>
 
             <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
@@ -686,7 +710,7 @@
         <!-- head ends -->
 
         <!-- button part starts -->
-        <div class="d-flex justify-content-center py-3">
+        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
             <label class="btn btn-outline-primary" for="btnradio9">BEAUTY</label>
 
@@ -820,7 +844,7 @@
 
     <!--********************** SECTION 13 *************************-->
     <!-- footer starts -->
-    <div class="container-fluid  bg-secondary  plr " >
+    <div class="container-fluid  bg-secondary  plr ">
         <div class=" sec13 d-flex justify-content-between">
             <div class="left">
                 <p style="margin-top: 10px; font-size: 20px;">Copyright @2014,Your store, All rights Reserved</p>
@@ -833,8 +857,8 @@
                 <i class="fa-brands fa-cc-stripe p-2"></i>
             </div>
         </div>
-    
-        </div>
+
+    </div>
     <!-- footer ends -->
 
     <!--********************** SECTION 13 *************************-->

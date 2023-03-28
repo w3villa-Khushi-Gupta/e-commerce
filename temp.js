@@ -113,3 +113,83 @@ verify_btn.addEventListener('click', (e) => {
         // <h6>Quantity:1*${quantity}=${"quantity"}</h6>
         const quantity=document.getElementById("qunatity").value;
         <h6>Total Price: 1 * ${quantity} = ${product.price * quantity}</h6>
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+        
+        
+        
+        
+const wishlist = []
+const cart = []
+async function add_to_cart(purpose, event, productId) {
+    event.preventDefault();
+
+    const response = await fetch('products_update.json');
+    const data = await response.json();
+
+    const x = document.getElementById("disp_cart")
+    const y = document.getElementById("wishlist")
+
+    const product = data.products_update.find(product => product.id === productId);
+
+
+    if (purpose === 'wishlist') {
+        wishlist.push(productId)
+        // if (wishlist.map(x)===productId)
+        //     return
+        // else {
+            let wishlist_con = document.createElement("div");
+            wishlist_con.innerHTML += `<div class="cart_item d-flex justify-content-around">
+            <div class="image"><img src="${product.img}" height=100 width=100></div>
+            <div class="heading">
+                <h5>${product.name}</h5>
+                <h6>$${product.price}</h6>
+                </div>
+                </div>
+                <hr>`
+            y.appendChild(wishlist_con);
+
+
+        
+    }
+    else if (purpose === 'cart') {
+        cart.push(productId)
+        // if (cart.map(x)===productId)
+        //     return
+        // else {
+            let cart_con = document.createElement("div");
+            cart_con.innerHTML += `<div class="cart_item d-flex justify-content-around">
+            <div class="image"><img src="${product.img}" height=100 width=100></div>
+            <div class="heading">
+                <h5>${product.name}</h5>
+                <h6>$${product.price}</h6>
+                <h6>Quantity:1*${quantity}=${quantity}</h6>
+                <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>
+            </div>
+        
+        </div>
+        <hr>
+        `;
+
+            x.appendChild(cart_con);
+        
+
+    }
+    // let quantity=document.getElementById("quantity").value;
+    // console.log(quantity);
+    console.log(product.name);
+}
+function toggleWhyBuyCategories(elem) {
+    let activElem = document.getElementsByClassName("active-why-buy")[0];
+    activElem.classList.remove("active-why-buy");
+    elem.classList.add("active-why-buy");
+    displayWhyBuyUs(elem.innerHTML.trim());
+  }
+
+//   
+const userData={
+    isLoggedIn:true
+}
+users.push(userData)
+localStorage.setItem("users", JSON.stringify(user_arr));

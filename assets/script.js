@@ -22,20 +22,40 @@ searchBox.addEventListener('input', function (event) {
     }
 })
 
-//modal_to_display_cart
-function modal() {
-    let window = document.getElementById("disp_cart");
-    window.style.display = "block";
-    let but = document.getElementById("cross");
-    but.onclick = function () {
+//modal_to_display_cart & wishlist
+function modal(id) {
+    let window;
+    if (id === 'cart') {
+        window = document.getElementById("disp_cart");
+        window.style.display = "block";
+
+    }
+    else if (id === 'wishlist') {
+        window = document.getElementById("wishlist");
+        window.style.display = "block";
+
+    }
+
+    let but1 = document.getElementById("crossC");
+    let but2 = document.getElementById("crossW");
+
+    but1.onclick = function () {
         window.style.display = "none";
     }
+    but2.onclick = function () {
+        window.style.display = "none";
+    }
+
+
 }
 
 // login and register
 //?????????????????  modals ?????????????????????????
 var loginModal = document.getElementById("login-modal");
 var registerModal = document.getElementById("register-modal");
+var cartModal = document.getElementById("disp_cart");
+var wishlistModal = document.getElementById("wishlist");
+
 const loginCloseButton = loginModal.querySelector('.close');
 const registerCloseButton = registerModal.querySelector('.close');
 
@@ -68,6 +88,14 @@ window.onclick = function (event) {
     } else if (event.target == registerModal) {
         registerModal.style.display = "none";
     }
+    else if (event.target == cartModal) {
+        cartModal.style.display = "none";
+
+    }
+    else if (event.target == wishlistModal) {
+        wishlistModal.style.display = "none";
+
+    }
 }
 // ???????????????????? fetching data ????????????????????????????
 // register page
@@ -82,15 +110,16 @@ submit_btn.addEventListener('click', (e) => {
     const userData = {
         id: userId,
         username: user_name,
-        password: pass
+        password: pass,
+        logIn:false
     };
 
     if (pass !== c_pass) {
         alert("Confirmation password do not match!  Try again.");
         return;
     }
-    const temp_arr = JSON.parse(localStorage.getItem("users"));
-
+    
+    const temp_arr = JSON.parse(localStorage.getItem("users"));;
     if (temp_arr) {
         for (let i = 0; i < temp_arr.length; i++) {
             if (temp_arr[i].username === user_name) {
@@ -101,40 +130,86 @@ submit_btn.addEventListener('click', (e) => {
     }
     user_arr.push(userData);
     localStorage.setItem("users", JSON.stringify(user_arr));
+
     alert("Successfully Registered.");
+
     registerModal.style.display = 'none';
+    openModal('login-modal');
+
 })
+
 // login page
 verify_btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const temp_arr = JSON.parse(localStorage.getItem("users"));
+     let temp_arr = JSON.parse(localStorage.getItem("users"));
 
     let login = document.getElementById("login_form");
     let user_login = document.getElementById("email_login");
     let pass_login = document.getElementById("pass_login");
-
+    
     for (let i = 0; i < temp_arr.length; i++) {
         const stored_user = temp_arr[i].username;
         const stored_pass = temp_arr[i].password;
-
-        if (stored_user !== user_login.value) {
-            alert("User does'nt exist");
-            return;
+            console.log("jiiiiiiii")
+        if (stored_user === user_login.value) {
+            login.reset();
+            found=1;
+            temp_arr[i].logIn= true;
+            localStorage.setItem("users", JSON.stringify(temp_arr));  
+            auth(stored_user);
+            break;
         }
         else if (stored_pass !== pass_login.value) {
             alert("Invalid Password");
-            return;
         }
-        else {
-            login.reset();
-            alert("Successfully Logged In");
-            loginModal.style.display = "none";
-            return;
-        }
-
+    }
+    if (found){
+        alert("Successfully Logged In");
+    }
+    else{
+        alert("User not found.")
     }
 })
+window.onload = function() {
+   
+    const temp_arr = JSON.parse(localStorage.getItem("users"));
+    
+    for(let i=0;i<temp_arr.length;i++){
+       user= temp_arr[i].username
+       if(temp_arr[i].logIn) {
+        auth(user);
+       }
+    }
+}
+function auth(username){
+   
+        loginModal.style.display = "none";
+        document.getElementById("login").style.display="none";
+        document.getElementById('register').style.display="none"
+        document.getElementById("user").style.display="block"
+        document.getElementById("welcome").innerHTML=`Welcome ${username}`
+        document.getElementById("logout").style.display="block"   
+    
+}
+
+
+function myclose(){
+    console.log("haaaaaaaaan")
+    const temp_arr = JSON.parse(localStorage.getItem("users"));
+    for(let i=0;i<temp_arr.length;i++){
+       if(temp_arr[i].logIn) {
+        temp_arr[i].logIn=false;
+        localStorage.setItem("users", JSON.stringify(temp_arr));
+       }
+
+       document.getElementById("user").style.display="none"
+       document.getElementById("logout").style.display="none"
+   
+       document.getElementById("login").style.display="block"
+       document.getElementById("register").style.display="block"
+   
+}}
 
 // why_buy_from_us
 fetch("why_buy_from_us.json")
@@ -190,9 +265,9 @@ fetch("products_update.json")
                   <div class="quantity d-flex">
                       <input name="quantity" type="number" class="quantity_input" min="1" max="10" value="1" style="width:3rem" >
                   </div>
-                  <button class="btn btn-primary " style="border-radius:5px" onclick="add_to_cart(event,${product.id})">ADD TO CART</button>
+                  <button class="btn btn-primary " style="border-radius:5px" onclick="add_to_cart(event,${product.id},'cart')">ADD TO CART</button>
                   <div class="emo d-flex ">
-                     <button><i class="fa-regular fa-heart mx-2"></i></button>
+                     <button onclick="add_to_cart(event,${product.id},'wishlist')"><i class="fa-regular fa-heart mx-2"></i></button>
                       <i class="fa-solid fa-right-left mx-2"></i>
                   </div>
               </div>
@@ -217,45 +292,72 @@ fetch("products_update.json")
         }
     })
 
+
+
 function quantityChanged(event) {
     let input = event.target
     if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+        input.value = 1;
     }
     quantity = input.value;
 }
 
-async function add_to_cart(event, productId) {
+let cartProduct=[];
+let wishlistProduct=[];
+
+async function add_to_cart(event, productId, which) {
     event.preventDefault();
     const response = await fetch('products_update.json');
     const data = await response.json();
-    const x = document.getElementById("disp_cart")
-    // let quantity=document.getElementById("quantity").value;
 
-    // console.log(quantity);
+    const x = document.getElementById("disp_cart")
+    const y = document.getElementById("wishlist")
+    console.log(y);
+
     const product = data.products_update.find(product => product.id === productId);
     console.log(product.name);
-    let cart_con = document.createElement("div");
-    cart_con.innerHTML += `<div class="cart_item d-flex justify-content-around">
-    <div class="image"><img src="${product.img}" height=100 width=100></div>
-    <div class="heading">
-        <h5>${product.name}</h5>
-        <h6>$${product.price}</h6>
-        <h6>Quantity:1*${quantity}=${quantity}</h6>
-        <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>
-    </div>
+    
+    // addition of products in array
+    const alreadyExists = which === 'cart' ? cartProduct.includes(productId) : wishlistProduct.includes(productId);
+    if (alreadyExists) {
+      alert('Product already added');
+      return;
+    }
+    which === 'cart' ? cartProduct.push(productId) : wishlistProduct.push(productId);
+    // addition of products in array
 
-</div>
-<hr>
-`;
-    x.appendChild(cart_con);
-    // quantity = 1;
-}
+    // cartEnquiry
+    let no_of_products=cartProduct.length;
+    let total = 0;
+    for (i=0;i<no_of_products;i++) {
+        total += parseFloat(product.price*quantity);
+        console.log(total)
+    }
+    document.getElementById("cartEnquiry").innerHTML=`${no_of_products} item(s) - $${total}`
+    console.log(no_of_products)
+    // cartEnquiry
+    
+    // creation of seperate divs for each product in cart and wishlist
+    let product_selected = document.createElement("div");
+    product_selected.innerHTML +=`<div class="cart_item d-flex justify-content-around">
+        <div class="image"><img src="${product.img}" height=100 width=100></div>
+            <div class="heading">
+                <h5>${product.name}</h5>
+                <h6>$${product.price}</h6>
+                ${which==='cart'?`<h6>Quantity:1*${quantity}=${quantity}</h6>
+                                <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>` : ''}
+            </div>
+
+        </div>
+        <hr>`;
+        
+        which === 'cart' ?( x.appendChild(product_selected)):(y.appendChild(product_selected));
+    }
+    // creation of seperate divs for each product in cart and wishlist
 
 
-// New in fashion section
 
-
+    // New in fashion section
 fetch("new_in_fashion.json")
     .then(response => response.json())
     .then(tempB => {
@@ -430,12 +532,18 @@ fetch("most_viewed.json")
             x.appendChild(update);
         }
     })
-function point(){
-    let pointer=document.getElementById("point");
-    pointer.style.display="block";
+function point() {
+    let pointer = document.getElementById("point");
+    pointer.style.display = "block";
 }
 // function leavepoint(){
 //     let pointer=document.getElementById("point");
 //     pointer.style.display="none";
 
 // }
+// function toggleWhyBuyCategories(elem) {
+//     let activElem = document.getElementsByClassName("active-why-buy")[0];
+//     activElem.classList.remove("active-why-buy");
+//     elem.classList.add("active-why-buy");
+//     displayWhyBuyUs(elem.innerHTML.trim());
+//   }
