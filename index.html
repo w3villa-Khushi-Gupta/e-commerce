@@ -23,6 +23,7 @@
 
     <!-- css-link -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -748,7 +749,241 @@
 
     <!--********************** SECTION 9 *************************-->
 
+    <!--********************** SEARCHPAGE **************************-->
+    <div class="searchPage  plr mtb" id="searchPage">
+        <h2 class="searchResult">Search - Camera </h2>
+        <hr>
+        <div class="d-flex ">
+            <div class="leftPartInSearch my-3">
+                <div class="filterPart d-flex justify-content-between">
+                    <div class="head">
+                        <h5>Filter</h5>
+                        <div class="underline mx-0" style="height: 2px;"></div>
+                    </div>
+                    <button class="d-flex py-0">
+                        &times;
+                        Clear
+                    </button>
+                </div>
+                <div class="price">
+                    <div class=" d-flex justify-content-between">
+                        <h5>PRICE</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+                    </div>
+                    <div class="plusMenu">
+                        <input type="range" id="slider" name="slider" min="100" max="1000" value="500">
+                        <div class="d-flex">
+                            $<input type="text" id="min" name="min" value="500">-
+                            $<input type="text" id="max" name="max" value="1000">
+                        </div>
+                    </div>
 
+                </div>
+                <hr>
+                <div class="availability ">
+                    <div class="d-flex justify-content-between">
+                        <h5>AVAILABILITY</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="checkbox">
+                        <label>In Stock</label>
+
+                        <input type="checkbox">
+                        <label>Out of Stock</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="subcategories">
+                    <div class="d-flex justify-content-between">
+                        <h5>SUBCATEGORIES</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <div>abc</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="brands">
+                    <div class="d-flex justify-content-between">
+                        <h5>BRANDS</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <div>abc</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="select">
+                    <div class="d-flex justify-content-between">
+                        <h5>SELECT</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <div>abc</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="radio">
+                    <div class="d-flex justify-content-between">
+                        <h5>RADIO</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="radio">
+                        <label>Small</label>
+                        <input type="radio">
+                        <label>Medium</label>
+                        <input type="radio">
+                        <label>Large</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="color">
+                    <div class="d-flex justify-content-between">
+                        <h5>COLOR</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <div>abc</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="clockspeed">
+                    <div class="d-flex justify-content-between">
+                        <h5>CLOCKSPEED</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="checkbox">
+                        <label>100 mhz</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="test1">
+                    <div class="d-flex justify-content-between">
+                        <h5>TEST 1</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="checkbox">
+                        <label>8GB</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="no_of_colors">
+                    <div class="d-flex justify-content-between">
+                        <h5>NO. OF COLORS</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="checkbox">
+                        <label>4</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="style">
+                    <div class="d-flex justify-content-between">
+                        <h5>STYLE</h5>
+                        <button class="plus">+</button>
+                        <button class="minus">-</button>
+
+                    </div>
+                    <div class="plusMenu">
+                        <input type="checkbox">
+                        <label>Sleek</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightPartInSearch ">
+                <div class="inputVals d-flex justify-content-between">
+                    <input type="text" class="searchResults" style="width:60%;">
+
+                    <select class="allCategories" style="width:30%;">
+                        <option value="" disabled selected>All Categories</option>
+                        <option value="abc">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="checkbox d-block my-3">
+                    <input type="checkbox">
+                    <label>Search in Subcategories</label> <br>
+                    <input type="checkbox">
+                    <label>Search in product descriptions</label>
+                </div>
+                <div class="bg-primary text-center my-3 searchB">
+                    <button class="text-white" style="font-size: 15px;">Search</button>
+                </div>
+                <h5 style="color:black">Products meeting the search criteria</h5>
+                <div class="underline mx-0" style="height: 2px;"></div>
+                <hr>
+                <div class="filters d-flex justify-content-between ">
+                    <div class="leftFilters d-flex mx-2">
+                        <a><i class="fa fa-th" style="font-size: 20px;"></i></a>
+                        <a><i class="fa-solid fa-list mx-2" style="font-size: 20px;"></i></a>
+                        <div>
+                            <a class="d-flex mx-2">
+                                <h6><i class="fa-solid fa-arrow-right-arrow-left mx-1 "
+                                        style="border: solid; border-radius: 50%;padding:2px"></i> </h6>
+                                <h6 class="text">Product Compare</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rightFilters d-flex ">
+                        <div class="mx-2">
+                            <label class="listLabels" for="sortList">Sort By:</label>
+                            <select name="sortList" id="sortList">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="listLabels" for="showList">Show:</label>
+                            <select name="showList" id="showList" aria-placeholder="12">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="searchItem"></div>
+                <hr>
+                <h6 class="text-center my-2">You have reached the end of the list.</h6>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--********************** SEARCHPAGE  *************************-->
 
     <!--********************** SECTION 10 *************************-->
     <!-- most viewed section starts -->
@@ -872,6 +1107,8 @@
         <i class="fa-solid fa-arrow-up "></i>
     </a>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/search.js"></script>
+
 
 </body>
 

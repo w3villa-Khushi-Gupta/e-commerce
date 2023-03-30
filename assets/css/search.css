@@ -1,0 +1,114 @@
+/* *********************COMMON CLASSES*********************** */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+h5{
+    color: rgb(3, 3, 134);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* *********************COMMON CLASSES*********************** */
+
+/* *********************Left Part*************************/
+.leftPartInSearch{
+    min-width:fit-content ;
+    width: 20%;
+    max-width: 300px;
+    border-right: 1px rgb(170, 167, 167) solid;
+    padding: 10px;
+}
+.filterPart h5{
+    color: black;
+}
+.filterPart .close{
+background-color: white;
+padding: 2px;
+}
+.filterPart button{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(3, 3, 134);
+    border-radius: 10px;
+    margin-top:8% ;
+    margin-bottom: 8%;
+}
+.plus{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(3, 3, 134);
+}
+.minus{
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(3, 3, 134);
+
+}
+.price input{
+    width: 100px;
+}
+
+/* *********************Left Part*************************/
+
+/* *********************Right Part*************************/
+.rightPartInSearch {
+    min-width: fit-content;
+    width: 80%;
+    max-width: 1200px;
+    margin: 45px;
+}
+.inputVals  input,select{
+    font-weight: 300;
+    color: rgb(97, 95, 95);
+    height: 40px;
+    border: 1px rgb(189, 183, 183) solid;
+    border-radius: 3px;
+}
+.rightPartInSearch label{
+    font-weight: 500;
+}
+.searchB {
+    padding: 8px;
+    border-radius: 3px;
+}
+/* .leftFilters i{
+    margin-bottom: 0px;
+
+} */
+.rightFilters label{
+    background-color: rgb(241, 238, 238);
+    border-radius: 2px;
+    padding: 7px;
+}
+
+
+/* *********************Right Part*************************/
+
+@media screen and (max-width:950px) {
+    .plr{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+@media screen and (max-width:840px) {
+    .leftPartInSearch{
+        display: none;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .rightPartInSearch label{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 50%;
+    }
+    .text,.listLabels{
+        display: none;
+    }
+}
