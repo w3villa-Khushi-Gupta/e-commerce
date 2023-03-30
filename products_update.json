@@ -1,7 +1,7 @@
 {
     "products_update": [
         {   "id":1,
-            "img": "assets/headphones.png",
+            "img": "assets/images/headphones.png",
             "label": "Custom Labels",
             "percentage":true,
             "top_brand":false,
@@ -14,7 +14,7 @@
             "strikethrough": "$3299.0"
         },
         {   "id":2,
-            "img": "assets/sandals.jpg",
+            "img": "assets/images/sandals.jpg",
             "label": "2-3 Days",
             "percentage": false,
             "top_brand":true,
@@ -28,7 +28,7 @@
             "strikethrough": "0.00"
         },
         {   "id":3,
-            "img": "assets/tv_set.jpg",
+            "img": "assets/images/tv_set.jpg",
             "label": "Pre-Order",
             "percentage": false,
             "top_brand":false,
@@ -42,7 +42,7 @@
             "strikethrough": "0.00"
         },
         {   "id":4,
-            "img": "assets/camera.jpg",
+            "img": "assets/images/camera.jpg",
             "label": "Pre-Order",
             "percentage": true,
             "top_brand":false,

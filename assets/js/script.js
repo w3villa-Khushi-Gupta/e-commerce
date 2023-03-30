@@ -1,26 +1,4 @@
-// Search bar
-const searchBox = document.getElementById('search-box');
-const searchResults = document.getElementById('search-results');
-let quantity;
 
-searchBox.addEventListener('input', function (event) {
-    const searchTerm = event.target.value.toLowerCase();
-    searchResults.innerHTML = '';
-
-    if (searchTerm.length >= 1) {
-        fetch('products_update.json')
-            .then(response => response.json())
-            .then(data => {
-                const matches = data.products_update.filter(item => item.name.toLowerCase().includes(searchTerm));
-                matches.forEach(item => {
-                    const link = document.createElement('a');
-                    link.style.display = "block"
-                    link.innerHTML = `<a href="#${item.name}">${item.name}</a>`
-                    searchResults.appendChild(link);
-                });
-            });
-    }
-})
 
 //modal_to_display_cart & wishlist
 function modal(id) {
@@ -111,14 +89,14 @@ submit_btn.addEventListener('click', (e) => {
         id: userId,
         username: user_name,
         password: pass,
-        logIn:false
+        logIn: false
     };
 
     if (pass !== c_pass) {
         alert("Confirmation password do not match!  Try again.");
         return;
     }
-    
+
     const temp_arr = JSON.parse(localStorage.getItem("users"));;
     if (temp_arr) {
         for (let i = 0; i < temp_arr.length; i++) {
@@ -142,21 +120,21 @@ submit_btn.addEventListener('click', (e) => {
 verify_btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-     let temp_arr = JSON.parse(localStorage.getItem("users"));
+    let temp_arr = JSON.parse(localStorage.getItem("users"));
 
     let login = document.getElementById("login_form");
     let user_login = document.getElementById("email_login");
     let pass_login = document.getElementById("pass_login");
-    
+
     for (let i = 0; i < temp_arr.length; i++) {
         const stored_user = temp_arr[i].username;
         const stored_pass = temp_arr[i].password;
-            console.log("jiiiiiiii")
+        console.log("jiiiiiiii")
         if (stored_user === user_login.value) {
             login.reset();
-            found=1;
-            temp_arr[i].logIn= true;
-            localStorage.setItem("users", JSON.stringify(temp_arr));  
+            found = 1;
+            temp_arr[i].logIn = true;
+            localStorage.setItem("users", JSON.stringify(temp_arr));
             auth(stored_user);
             break;
         }
@@ -164,52 +142,53 @@ verify_btn.addEventListener('click', (e) => {
             alert("Invalid Password");
         }
     }
-    if (found){
+    if (found) {
         alert("Successfully Logged In");
     }
-    else{
+    else {
         alert("User not found.")
     }
 })
-window.onload = function() {
-   
+window.onload = function () {
+
     const temp_arr = JSON.parse(localStorage.getItem("users"));
-    
-    for(let i=0;i<temp_arr.length;i++){
-       user= temp_arr[i].username
-       if(temp_arr[i].logIn) {
-        auth(user);
-       }
+
+    for (let i = 0; i < temp_arr.length; i++) {
+        user = temp_arr[i].username
+        if (temp_arr[i].logIn) {
+            auth(user);
+        }
     }
 }
-function auth(username){
-   
-        loginModal.style.display = "none";
-        document.getElementById("login").style.display="none";
-        document.getElementById('register').style.display="none"
-        document.getElementById("user").style.display="block"
-        document.getElementById("welcome").innerHTML=`Welcome ${username}`
-        document.getElementById("logout").style.display="block"   
-    
+function auth(username) {
+
+    loginModal.style.display = "none";
+    document.getElementById("login").style.display = "none";
+    document.getElementById('register').style.display = "none"
+    document.getElementById("user").style.display = "block"
+    document.getElementById("welcome").innerHTML = `Welcome ${username}`
+    document.getElementById("logout").style.display = "block"
+
 }
 
 
-function myclose(){
+function myclose() {
     console.log("haaaaaaaaan")
     const temp_arr = JSON.parse(localStorage.getItem("users"));
-    for(let i=0;i<temp_arr.length;i++){
-       if(temp_arr[i].logIn) {
-        temp_arr[i].logIn=false;
-        localStorage.setItem("users", JSON.stringify(temp_arr));
-       }
+    for (let i = 0; i < temp_arr.length; i++) {
+        if (temp_arr[i].logIn) {
+            temp_arr[i].logIn = false;
+            localStorage.setItem("users", JSON.stringify(temp_arr));
+        }
 
-       document.getElementById("user").style.display="none"
-       document.getElementById("logout").style.display="none"
-   
-       document.getElementById("login").style.display="block"
-       document.getElementById("register").style.display="block"
-   
-}}
+        document.getElementById("user").style.display = "none"
+        document.getElementById("logout").style.display = "none"
+
+        document.getElementById("login").style.display = "block"
+        document.getElementById("register").style.display = "block"
+
+    }
+}
 
 // why_buy_from_us
 fetch("why_buy_from_us.json")
@@ -302,8 +281,8 @@ function quantityChanged(event) {
     quantity = input.value;
 }
 
-let cartProduct=[];
-let wishlistProduct=[];
+let cartProduct = [];
+let wishlistProduct = [];
 
 async function add_to_cart(event, productId, which) {
     event.preventDefault();
@@ -316,48 +295,59 @@ async function add_to_cart(event, productId, which) {
 
     const product = data.products_update.find(product => product.id === productId);
     console.log(product.name);
-    
+
     // addition of products in array
     const alreadyExists = which === 'cart' ? cartProduct.includes(productId) : wishlistProduct.includes(productId);
     if (alreadyExists) {
-      alert('Product already added');
-      return;
+        alert('Product already added');
+        return;
     }
-    which === 'cart' ? cartProduct.push(productId) : wishlistProduct.push(productId);
+    else {
+
+        if (which === 'cart') {
+            cartProduct.push(productId);
+            localStorage.setItem("ProductCart", JSON.stringify(cartProduct));
+        }
+        else {
+            wishlistProduct.push(productId);
+            localStorage.setItem("wishlist", JSON.stringify(wishlistProduct));
+        }
+
+    }
+    // which === 'cart' ? cartProduct.push(productId) : wishlistProduct.push(productId);
     // addition of products in array
 
     // cartEnquiry
-    let no_of_products=cartProduct.length;
+    let no_of_products = cartProduct.length;
     let total = 0;
-    for (i=0;i<no_of_products;i++) {
-        total += parseFloat(product.price*quantity);
+    for (i = 0; i < no_of_products; i++) {
+        total += parseFloat(product.price * quantity);
         console.log(total)
     }
-    document.getElementById("cartEnquiry").innerHTML=`${no_of_products} item(s) - $${total}`
+    document.getElementById("cartEnquiry").innerHTML = `${no_of_products} item(s) - $${total}`
     console.log(no_of_products)
     // cartEnquiry
-    
+
     // creation of seperate divs for each product in cart and wishlist
     let product_selected = document.createElement("div");
-    product_selected.innerHTML +=`<div class="cart_item d-flex justify-content-around">
+    product_selected.innerHTML += `<div class="cart_item d-flex justify-content-around">
         <div class="image"><img src="${product.img}" height=100 width=100></div>
             <div class="heading">
                 <h5>${product.name}</h5>
                 <h6>$${product.price}</h6>
-                ${which==='cart'?`<h6>Quantity:1*${quantity}=${quantity}</h6>
+                ${which === 'cart' ? `<h6>Quantity:1*${quantity}=${quantity}</h6>
                                 <h6>Total Price: 1 * ${quantity} = $${product.price * quantity}</h6>` : ''}
             </div>
 
         </div>
         <hr>`;
-        
-        which === 'cart' ?( x.appendChild(product_selected)):(y.appendChild(product_selected));
-    }
-    // creation of seperate divs for each product in cart and wishlist
+
+    which === 'cart' ? (x.appendChild(product_selected)) : (y.appendChild(product_selected));
+}
+// creation of seperate divs for each product in cart and wishlist       
 
 
-
-    // New in fashion section
+// New in fashion section
 fetch("new_in_fashion.json")
     .then(response => response.json())
     .then(tempB => {
@@ -547,3 +537,12 @@ function point() {
 //     elem.classList.add("active-why-buy");
 //     displayWhyBuyUs(elem.innerHTML.trim());
 //   }
+
+var slider = document.getElementById("slider");
+var minInput = document.getElementById("min");
+var maxInput = document.getElementById("max");
+
+slider.addEventListener("input", function () {
+    minInput.value = slider.value;
+    maxInput.value = slider.max - slider.value;
+});

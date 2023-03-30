@@ -2,7 +2,7 @@
     "from_our_blog":[{
         "date1":"2",
         "date2":"Aug",
-        "img":"assets/guy1.jpg",
+        "img":"assets/images/guy1.jpg",
         "user":"admin",
         "comment":"31",
         "viewers":"18937",
@@ -13,7 +13,7 @@
     {
         "date1":"2",
         "date2":"Aug",
-        "img":"assets/i_g4.jpg",
+        "img":"assets/images/i_g4.jpg",
         "user":"admin",
         "comment":"31",
         "viewers":"18937",
@@ -23,7 +23,7 @@
     {
         "date1":"2",
         "date2":"Aug",
-        "img":"assets/guy2.jpg",
+        "img":"assets/images/guy2.jpg",
         "user":"admin",
         "comment":"31",
         "viewers":"18937",

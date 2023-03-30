@@ -1,9 +1,9 @@
 {
     "why_buy_from_us":[
-        {"img":"assets/girl1.jpg"},
-        {"img":"assets/girl2.jpg"},
-        {"img":"assets/girl3.jpg"},
-        {"img":"assets/girl4.jpeg"},
-        {"img":"assets/girl1.jpg"}
+        {"img":"assets/images/girl1.jpg"},
+        {"img":"assets/images/girl2.jpg"},
+        {"img":"assets/images/girl3.jpg"},
+        {"img":"assets/images/girl4.jpeg"},
+        {"img":"assets/images/girl1.jpg"}
     ]
 }
