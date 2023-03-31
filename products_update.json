@@ -1,6 +1,7 @@
 {
     "products_update": [
         {   "id":1,
+            "cat":"headphones",
             "img": "assets/images/headphones.png",
             "label": "Custom Labels",
             "percentage":true,

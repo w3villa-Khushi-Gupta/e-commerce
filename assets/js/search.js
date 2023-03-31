@@ -26,21 +26,17 @@ searchBox.addEventListener('input', function (event) {
 
 
 
+// home button functionality
+home=document.getElementById("home")
+home.addEventListener('click',function(e){
+    document.getElementById("shut1").style.display = "block"
+    document.getElementById("searchPage").style.display = "none"
 
-// to remove homePage content and display searchPage
-const shut = document.getElementById("shut1")
-const search_page = document.getElementById("searchPage")
-const searchButton = document.getElementById("serachButton")
-
-searchButton.onclick = function (e) {
-    e.preventDefault()
-    shut.style.display = "none"
-    search_page.style.display = "block"
-}
-// to remove homePage content and display searchPage
+})
+// home button functionality
 
 
-// (leftSide) =/- button functinality
+// (leftSide) +/- button functionality
 const plusButton = document.getElementsByClassName("plus")
 const minusButton = document.getElementsByClassName("minus")
 const plusMenu = document.getElementsByClassName("plusMenu")
@@ -59,7 +55,7 @@ for (let i = 0; i < plusButton.length; i++) {
     });
 
 }
-// (leftSide) =/- button functinality
+// (leftSide) +/- button functionality
 
 
 
@@ -67,9 +63,13 @@ for (let i = 0; i < plusButton.length; i++) {
 searchShow = []
 function searchResult(event,id) {
     event.preventDefault()
+    console.log(id);
     // console.log(title)
     // let titleVal=document.getElementById("search-box")
     // titleVal.value=title;
+    
+    const shut = document.getElementById("shut1")
+    const search_page = document.getElementById("searchPage")
     const item = document.getElementById("searchItem");
     
     item.innerHTML='';
@@ -89,6 +89,7 @@ function searchResult(event,id) {
             const product = data.products_update[i];
 
             if(product.id===id){
+                document.getElementById("searchResult").innerHTML=`Search - ${product.name}`
                 const update = document.createElement("div")
                 update.style.overflow = "hidden";
                 update.innerHTML = `<div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
@@ -136,7 +137,10 @@ function searchResult(event,id) {
             }
     
             }
-            
+            shut.style.display = "none"
+            search_page.style.display = "block"
+        
+        
     })
 
 }
