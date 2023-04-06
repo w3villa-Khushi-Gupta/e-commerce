@@ -87,7 +87,9 @@ padding: 2px;
     padding: 7px;
 }
 
-
+.plusMenu{
+    display: none;
+}
 /* *********************Right Part*************************/
 
 @media screen and (max-width:950px) {

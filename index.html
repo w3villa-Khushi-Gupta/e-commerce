@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- pagination -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- font-awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -23,7 +26,7 @@
 
     <!-- css-link -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/pagination.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,1087 +37,387 @@
 </head>
 
 <body>
-    <!--********************** NAVBAR SECTION *************************-->
-
-    <!--NAVBAR 1-->
-    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="nav1">
-        <div class="container-fluid ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-                <div>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#"><i class="fa-solid fa-house mx-1"></i>Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-award mx-1"></i>About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope mx-1"></i>Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-sharp fa-regular fa-circle-question mx-1"></i>FAQ
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-                <div>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                🏴󠁧󠁢󠁥󠁮󠁧󠁿 English
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">🇯🇵 Japanese</a></li>
-                                <li><a class="dropdown-item" href="#">🇮🇳 Hindi</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                $ Dollar
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">₹ Rupees</a></li>
-                                <li><a class="dropdown-item" href="#">€ Pound</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-                <div>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-solid fa-user "></i><i class="fa-solid fa-bars mx-1"></i>More Menus
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">⚙ Settings</a></li>
-                                <li><a class="dropdown-item" href="#">More</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-truck mx-1"></i>Delivery
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- NAVBAR 1 -->
-    <!-- NAVBAR-MOBILE-VIEW -->
-    <div class=" navbar-expand-lg  plr bg-primary hide">
-
-        <div class=" d-flex justify-content-between topA py-2">
-            <div class="left d-flex">
-                <div class="d-flex ">
-                    <div class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-user mx-1"></i>
-                            Login
-                        </a>
-                    </div>
-                    <div class="nav-item">
-
-                        <a class="nav-link " href="#">
-                            <i class="fa-solid fa-pen mx-1"></i>
-                            Register
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="right d-flex ">
-                <div class="d-flex">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            $ Dollar
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">₹ Rupees</a></li>
-                            <li><a class="dropdown-item" href="#">€ Pound</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            🏴󠁧󠁢󠁥󠁮󠁧󠁿 English
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">🇯🇵 Japanese</a></li>
-                            <li><a class="dropdown-item" href="#">🇮🇳 Hindi</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- NAVBAR-MOBILE-VIEW -->
-
-    <!-- NAVBAR 2 -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary plr nb2" id="nav2">
-        <div class="container-fluid d-flex justify-content-between">
-            <div>
-                <a class="navbar-brand" href="#" id="journal">Journal</a>
-
-            </div>
-            <div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="searchbar"
-                    aria-controls="searchbar" aria-expanded="false" aria-label="Toggle navigation" order="2">
-                    <span"><i class="fas fa-search"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="searchbar" id="search_here">
-                    <form class="d-flex" role="search">
-                        <div>
-                            <button class="btn btn-primary dropdown-toggle all " type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                All
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="searching">
-                            <input class=" form-control me-2" type="search" placeholder="Search here..."
-                                aria-label="Search" id="search-box">
-                            <ul id="search-results"></ul>
-
-                        </div>
-                        <div><button class="btn btn-primary search" type="search" id="serachButton"><i
-                                    class="fas fa-search"></i></button>
-
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
-            <div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                    aria-expanded="false" aria-label="Toggle navigation" order="1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="icons">
-                        <li class="nav-item">
-                            <button class="nav-link" onclick="openModal('login-modal')" id="login">
-                                <i class="fas fa-user"></i>
-                                <h6>Login</h6>
-                            </button>
-                            <button class="nav-link" id="user">
-                                <i class="fas fa-user"></i>
-                                <h6 id="welcome"></h6>
-                            </button>
-
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" onclick="openModal('register-modal')" id="register">
-                                <i class="fa-solid fa-pencil"></i>
-                                <h6>Register</h6>
-                            </button>
-                            <button class="nav-link" onclick="myclose()" id="logout">
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                                <h6>Logout</h6>
-                            </button>
-
-
-                        </li>
-                        <li class="nav-item">
-                            <!-- <a href="assets/wishlist.html"> -->
-                            <button class="nav-link" onclick="modal('wishlist')">
-                                <i class="far fa-heart"></i>
-                                <h6>Wishlist</h6>
-                            </button>
-                            <!-- </a> -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-repeat"></i>
-                                <h6>Compare</h6>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <button class="navbar-toggler cart" type="button" data-bs-toggle="collapse" data-bs-target="#cart"
-                    aria-controls="#cart" aria-expanded="false" aria-label="Toggle navigation" order="1">
-                    <span> <i class="fa-solid fa-cart-shopping"></i></span>
-                </button>
-                <div class="collapse navbar-collapse">
-                    <div class="d-flex justify-content-between" id="cart">
-                        <h6 class="nav-item" id="cartEnquiry">0 item(s)-$0.00</h6>
-                        <button class="btn cart" onclick="modal('cart')">
-                            <i class="fa-solid fa-cart-shopping bg-primary cartA"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </nav>
-    <!-- NAVBAR 2 -->
-
-    <!-- cart_window -->
-    <div class="disp_cart" id="disp_cart" style="width: 30rem;right: 0;height: auto;">
-        <button class="position-absolute" id="crossC"
-            style="right:2px; border: none; background-color: white;">X</button>
-        <h1 class="text-center py-2">Products in cart</h1>
-    </div>
-    <!-- cart_window -->
-    <!-- wishlist_window -->
-    <div class="wishlist" id="wishlist" style="width: 30rem;right: 0;height: auto;">
-        <button class="position-absolute" id="crossW"
-            style="right: 2px;; border: none; background-color: white;">X</button>
-        <h1 class="text-center py-2">Products in Wishlist</h1>
-    </div>
-    <!-- wishlist_window -->
-
-    <!-- login and register -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>Login</h2>
-            <form id="login_form">
-                <input type="text" placeholder="Email" id="email_login">
-                <input type="password" placeholder="Password" id="pass_login">
-                <button type="submit" id="verify">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="register-modal" class="modal">
-        <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>Register</h2>
-            <input type="text" placeholder="Email" id="email_register">
-            <input type="password" placeholder="Password" id="password_register">
-            <input type="password" placeholder="Confirm Password" id="confirm_password">
-            <button type="submit" id="submit">Submit</button>
-
-        </div>
-    </div>
-    <!-- login and register -->
-
-    <!-- NAVBAR 3 -->
-    <nav class="navbar navbar-expand-lg bg-primary plr py-0 nb3" id="nav3" data-bs-theme="dark">
-        <div class="container-fluid d-flex justify-content-between">
-            <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="all_dep">
-                    <li class="nav-item">
-                        <a class="menuL bg-warning d-flex ">
-                            <i class="fa-solid fa-bars"></i>
-                            <h6 class="position-relative">ALL DEPARTMENTS
-                                <span class="position-absolute top-0 start-100 translate-middle badge  bg-danger">
-                                    SALE
-                                </span>
-                            </h6>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="menuL ">
-                            <h6>MULTILEVEL</h6>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="menuL">
-                            <h6 class="position-relative">MEGA MENU
-                                <span class="position-absolute top-0 start-100 translate-middle badge  bg-warning">
-                                    NEW
-                                </span>
-                            </h6>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="menuL ">
-                            <h6>FULLWIDTH</h6>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-            <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="all_dep">
-                    <li class="nav-item">
-                        <a class="menuR d-flex">
-                            <i class="fa-solid fa-phone-volume"></i>
-                            <h6>1.800.555.6789</h6>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="menuR bg-warning d-flex">
-                            <i class="fa-solid fa-comment"></i>
-                            <h6>BLOG</h6>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-    <!-- NAVBAR 3 -->
-
-    <!--********************** NAVBAR SECTION *************************-->
-
+    <div id="header"></div>
     <!--**********************  SECTION 1 *************************-->
 
     <!-- carousel/card section -->
-    <div id="shut1">
-        <div class="container-fluid plr mtb sec1">
-            <div class=" row sect1 justify-content-around d-flex">
-                <div class=" carousel-one" style="width:70rem;">
-                    <div id="carouselExampleCaptions" class="carousel slide">
-                        <div class="carousel-indicators ">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner ">
-                            <div class="carousel-item active">
-                                <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <a class="mobile text-white bg-primary p-1">Mobile</a>
-                                    <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
-                                    <button class="learn_more">Learn More -></button>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <a class="mobile text-white bg-primary p-1">Mobile</a>
-                                    <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
-                                    <button class="learn_more">Learn More -></button>
 
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
-                                <div class="carousel-caption d-none d-md-block ">
-                                    <a class="mobile text-white bg-primary p-1">Mobile</a>
-                                    <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
-                                    <button class="learn_more">Learn More -></button>
-                                </div>
-                            </div>
-                        </div>
-
+    <div class="container-fluid plr mtb sec1">
+        <div class=" row sect1 justify-content-around d-flex">
+            <div class=" carousel-one" style="width:70rem;">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators ">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
-                </div>
-                <div class="  col-3 side_card justify-content-evenly">
-
-                    <div class="one">
-                        <div class="wearables d-flex bg-white px-0" style="width: 25rem;">
-                            <div class="wearables-body">
-                                <h6>WEARABLES</h6>
-                                <h4>Intelligent<br />& Durable<br />Besign</h4>
-                            </div>
-                            <div class="card_image">
-                                <img src="assets/images/mobile_3.png" height="200" width="240" />
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a class="mobile text-white bg-primary p-1">Mobile</a>
+                                <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
+                                <button class="learn_more">Learn More -></button>
                             </div>
                         </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a class="mobile text-white bg-primary p-1">Mobile</a>
+                                <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
+                                <button class="learn_more">Learn More -></button>
 
-                    </div>
-                    <div class="two">
-                        <div class="wearables d-flex  bg-white px-0" style="width: 25rem;">
-                            <div class="wearables-body">
-                                <h6>WEARABLES</h6>
-                                <h4>Intelligent<br />& Durable<br />Besign</h4>
                             </div>
-                            <div class="card_image">
-                                <img src="assets/images/mobile_3.png" height="200" width="240" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/mobile 1.jpg" class="d-block w-100" height="480" alt="...">
+                            <div class="carousel-caption d-none d-md-block ">
+                                <a class="mobile text-white bg-primary p-1">Mobile</a>
+                                <h1 class="text-black">Best Mobile Options <br />at any resolution</h1>
+                                <button class="learn_more">Learn More -></button>
                             </div>
-
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-        <!-- carousel/card section -->
-        <!--********************** SECTION 1 *************************-->
+            <div class="  col-3 side_card justify-content-evenly">
 
-        <!--********************** SECTION 2 *************************-->
-
-        <!-- perks -->
-        <div class="container-fluid bg-secondary plr sec2">
-            <div class="row justify-content-around py-3">
-                <div class="col-3 perks d-flex" style="width: 20rem;">
-                    <div class="icon">
-                        <i class="fa-solid fa-truck-fast"></i>
-                    </div>
-                    <div class="content my-2">
-                        <h5>Free Shipping</h6>
-                            <h6>Free Delivery Over $100</h6>
-                    </div>
-                </div>
-                <div class="col-3 perks d-flex" style="width: 20rem;">
-                    <div class="icon">
-                        <i class="fa-sharp fa-solid fa-arrow-rotate-left"></i>
-                    </div>
-                    <div class="content my-2">
-                        <h5>Free Shipping</h5>
-                        <h6>Hassle Free Returns</h6>
-                    </div>
-                </div>
-                <div class="col-3 perks d-flex" style="width: 20rem;">
-                    <div class="icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <div class="content my-2">
-                        <h5>Secure Shopping</h5>
-                        <h6>Best Security Features</h6>
+                <div class="one">
+                    <div class="wearables d-flex bg-white px-0" style="width: 25rem;">
+                        <div class="wearables-body">
+                            <h6>WEARABLES</h6>
+                            <h4>Intelligent<br />& Durable<br />Besign</h4>
+                        </div>
+                        <div class="card_image">
+                            <img src="assets/images/mobile_3.png" height="200" width="240" />
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-3 perks d-flex" style="width: 20rem;">
-                    <div class="icon">
-                        <i class="fa-solid fa-cube"></i>
-                    </div>
+                <div class="two">
+                    <div class="wearables d-flex  bg-white px-0" style="width: 25rem;">
+                        <div class="wearables-body">
+                            <h6>WEARABLES</h6>
+                            <h4>Intelligent<br />& Durable<br />Besign</h4>
+                        </div>
+                        <div class="card_image">
+                            <img src="assets/images/mobile_3.png" height="200" width="240" />
+                        </div>
 
-                    <div class="content my-2">
-                        <h5>Unlimited Blocks</h5>
-                        <h6>Any content,any page</h6>
                     </div>
                 </div>
 
             </div>
         </div>
-        <!-- perks -->
-        <!--********************** SECTION 2 *************************-->
+    </div>
+    <!-- carousel/card section -->
+    <!--********************** SECTION 1 *************************-->
 
-        <!--********************** SECTION 3*************************-->
+    <!--********************** SECTION 2 *************************-->
 
-        <!-- why buy from us -->
-        <div class="container-fluid plr mtb">
-            <h1 class=" text-center">
-                Why buy from us?
-            </h1>
-            <div class="underline"></div>
-            <p class=" content text-center py-3">
-                Journal has been the best selling and most loved opencart theme since first launch in 2013. Tried and
-                tested
-                by over 20K people, Journal<br />is the best opencart theme framework in the market today.<span><a
-                        href="#">Learn more</a></span>
-            </p>
-
-            <div class="d-flex justify-content-center py-3 " style="flex-wrap:wrap">
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
-                    onclick="point()">
-                <label class="btn btn-outline-primary position-relative" for="btnradio1">
-                    TOP CATEGORIES
-                    <div class="point bg-primary position-absolute" id="point"></div>
-
-                </label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">ELECTRONICS</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio4">FASHION</label>
-            </div>
-
-            <div class=" d-flex justify-content-around py-3 " id="why_buy" style="flex-wrap: wrap;">
-            </div>
-        </div>
-        <!-- why buy from us -->
-        <!--********************** SECTION 3 *************************-->
-
-        <!--********************** SECTION 4 *************************-->
-        <!-- featured content starts -->
-        <div class="container-fluid bg-light plr mtb">
-            <!-- head part starts -->
-            <h1 class="text-center">
-                Featured Products
-            </h1>
-            <div class="underline"></div>
-
-            <p class="content text-center py-3">
-                Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
-                per
-                module and per breakpoint.<br /> Each module can display products in either grid or list view with
-                different
-                styles per module.
-            </p>
-            <!-- head part ends -->
-
-            <!--button part starts-->
-            <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked
-                    onclick="point()">
-                <label class="btn btn-outline-primary" for="btnradio5">TOP CATEGORIES</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio6">ELECTRONICS</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio7">BEAUTY</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio8">FASHION</label>
-            </div>
-
-            <!-- button part ends -->
-
-            <!-- Image parts starts -->
-            <div class=" d-flex justify-content-around py-3 " id="product_list" style="flex-wrap: wrap;">
-            </div>
-            <!-- image part ends -->
-            <div class="search_products text-center py-3">
-                <button class="btn btn-primary " style="border-radius:5px" href="#">Search all products →</button>
-            </div>
-
-        </div>
-        <!-- featured content part ends -->
-
-        <!--********************** SECTION 4 *************************-->
-
-
-        <!--********************** SECTION 5 *************************-->
-
-        <!-- Featured categories starts -->
-        <div class="container-fluid bg-muted plr mtb">
-            <!-- head part starts -->
-            <h1 class="text-center">
-                Featured Category
-            </h1>
-            <div class="underline " style="left: 0;"></div>
-            <p class="content text-center py-3">
-                Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
-                per
-                module and per breakpoint.<br /> Each module can display products in either grid or list view with
-                different
-                styles per module.
-            </p>
-            <!-- head part ends -->
-            <!-- image part starts -->
-            <div class="hero d-flex justify-content-center">
-                <div class="card bg-secondary p-2" style="width: 18rem;">
-                    <h2>
-                        Fashion
-                    </h2>
-                    <div class="underline mx-0"></div>
-                    <img class="py-2" src="assets/images/beauty.jpg" height="300">
-                    <a href="#" class="text-light">Accessories<br>Dresses<br>Pants<br>T-Shirts</a>
-                    <a href="#">See all in Fashion</a>
+    <!-- perks -->
+    <div class="container-fluid bg-secondary plr sec2">
+        <div class="row justify-content-around py-3">
+            <div class="col-3 perks d-flex" style="width: 20rem;">
+                <div class="icon">
+                    <i class="fa-solid fa-truck-fast"></i>
                 </div>
-                <div class="other_cards p-2">
-                    <h2>
-                        New in Fashion
-                    </h2>
-                    <div class="underline mx-0"></div>
-                    <div class="d-flex justify-content-center" id="other_cards" style="flex-wrap: wrap;"></div>
+                <div class="content my-2">
+                    <h5>Free Shipping</h6>
+                        <h6>Free Delivery Over $100</h6>
                 </div>
             </div>
-            <!-- image part ends -->
-        </div>
-        <!-- Featured categories ends -->
-
-        <!--********************** SECTION 5 *************************-->
-
-        <!--********************** SECTION 6 *************************-->
-
-        <!-- shop by brand starts -->
-        <div class="container-fluid  bg-white plr mtb">
-            <!-- head part starts -->
-            <h1 class="text-center ">
-                Shop by Brand
-            </h1>
-            <div class="underline"></div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active d-flex justify-content-around" id="car-act">
-                    </div>
-                    <div class="carousel-item active d-flex justify-content-around" id="car-inact">
-                    </div>
+            <div class="col-3 perks d-flex" style="width: 20rem;">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-arrow-rotate-left"></i>
                 </div>
-                <div class="carousel-indicators ">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
+                <div class="content my-2">
+                    <h5>Free Shipping</h5>
+                    <h6>Hassle Free Returns</h6>
                 </div>
             </div>
+            <div class="col-3 perks d-flex" style="width: 20rem;">
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="content my-2">
+                    <h5>Secure Shopping</h5>
+                    <h6>Best Security Features</h6>
+                </div>
+
+            </div>
+            <div class="col-3 perks d-flex" style="width: 20rem;">
+                <div class="icon">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+
+                <div class="content my-2">
+                    <h5>Unlimited Blocks</h5>
+                    <h6>Any content,any page</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- perks -->
+    <!--********************** SECTION 2 *************************-->
+
+    <!--********************** SECTION 3*************************-->
+
+    <!-- why buy from us -->
+    <div class="container-fluid plr mtb">
+        <h1 class=" text-center">
+            Why buy from us?
+        </h1>
+        <div class="underline"></div>
+        <p class=" content text-center py-3">
+            Journal has been the best selling and most loved opencart theme since first launch in 2013. Tried and
+            tested
+            by over 20K people, Journal<br />is the best opencart theme framework in the market today.<span><a
+                    href="#">Learn more</a></span>
+        </p>
+
+        <div class="d-flex justify-content-center py-3 " style="flex-wrap:wrap">
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
+                onclick="point()">
+            <label class="btn btn-outline-primary position-relative" for="btnradio1">
+                TOP CATEGORIES
+                <div class="point bg-primary position-absolute" id="point"></div>
+
+            </label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">ELECTRONICS</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio4">FASHION</label>
         </div>
 
-        <!-- shop by brands ends -->
-
-        <!--********************** SECTION 6 *************************-->
-
-        <!--********************** SECTION 7 *************************-->
-
-        <!-- improve gallery module starts -->
-        <div class="container-fluid bg-secondary plr mtb">
-            <!-- head starts -->
-            <h1 class="text-center p-md-2">
-                Improved Gallery Module
-            </h1>
-            <div class="underline"></div>
-            <p class=" content text-center p-md-2">
-                Journal has been the best selling and most loved opencart theme since first launch in 2013. Tried and
-                tested.<br />
-                guyeforjioriojrhiurvuivjvoivrnoivjnvrhkrvnhceyu c8vncui yefcbnrvimfc
-            </p>
-            <!-- head ends -->
-            <!--image part starts-->
-            <div class="d-flex justify-content-around" id="imp_gal" style="flex-wrap: wrap;">
-            </div>
-            <!-- image part ends -->
+        <div class=" d-flex justify-content-around py-3 " id="why_buy" style="flex-wrap: wrap;">
         </div>
-        <!-- improved gallery module ends -->
 
-        <!--********************** SECTION 7 *************************-->
+        <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" id="why_buy"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div> -->
 
-        <!--********************** SECTION 8 *************************-->
-        <!-- from our blog part starts -->
-        <div class="container-fluid  bg-light plr mtb">
-            <!--head starts -->
-            <h1 class="text-center">
-                From Our Blog
-            </h1>
-            <div class="underline"></div>
-            <p class=" content text-center">
-                Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
-                per
-            </p>
-            <!-- head ends -->
 
-            <!-- button part starts -->
-            <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio9">BEAUTY</label>
+    </div>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio10">FASHION</label>
-            </div>
-            <!-- button part ends -->
+    <!-- why buy from us -->
+    <!--********************** SECTION 3 *************************-->
 
-            <!-- image part starts -->
-            <div class="d-flex justify-content-around" id="latest_post" style="flex-wrap: wrap;">
-            </div>
-            <!-- image part ends -->
+    <!--********************** SECTION 4 *************************-->
+    <!-- featured content starts -->
+    <div class="container-fluid bg-light plr mtb">
+        <!-- head part starts -->
+        <h1 class="text-center">
+            Featured Products
+        </h1>
+        <div class="underline"></div>
+
+        <p class="content text-center py-3">
+            Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
+            per
+            module and per breakpoint.<br /> Each module can display products in either grid or list view with
+            different
+            styles per module.
+        </p>
+        <!-- head part ends -->
+
+        <!--button part starts-->
+        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked
+                onclick="point()">
+            <label class="btn btn-outline-primary" for="btnradio5">TOP CATEGORIES</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio6">ELECTRONICS</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio7">BEAUTY</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio8">FASHION</label>
         </div>
-        <!-- from our blog part ends -->
 
-        <!--********************** SECTION 8 *************************-->
+        <!-- button part ends -->
 
-        <!--********************** SECTION 9 *************************-->
-        <!-- what are people saying about us-starts -->
-        <div class="container-fluid   bg-white plr mtb">
-            <!-- head starts -->
-            <h1 class="text-center ">
-                What are people saying about us?
-            </h1>
-            <!-- head ends -->
-            <div class="underline"></div>
-            <div class="d-flex justify-content-evenly py-3" id="people" style="flex-wrap: wrap;">
+        <!-- Image parts starts -->
+        <div class=" d-flex justify-content-around py-3 " id="product_list" style="flex-wrap: wrap;">
+        </div>
+        <!-- image part ends -->
+        <div class="search_products text-center py-3">
+            <button class="btn btn-primary " style="border-radius:5px" href="#">Search all products →</button>
+        </div>
+
+    </div>
+    <!-- featured content part ends -->
+
+    <!--********************** SECTION 4 *************************-->
+
+
+    <!--********************** SECTION 5 *************************-->
+
+    <!-- Featured categories starts -->
+    <div class="container-fluid bg-muted plr mtb">
+        <!-- head part starts -->
+        <h1 class="text-center">
+            Featured Category
+        </h1>
+        <div class="underline " style="left: 0;"></div>
+        <p class="content text-center py-3">
+            Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
+            per
+            module and per breakpoint.<br /> Each module can display products in either grid or list view with
+            different
+            styles per module.
+        </p>
+        <!-- head part ends -->
+        <!-- image part starts -->
+        <div class="hero d-flex justify-content-center">
+            <div class="card bg-secondary p-2" style="width: 18rem;">
+                <h2>
+                    Fashion
+                </h2>
+                <div class="underline mx-0"></div>
+                <img class="py-2" src="assets/images/beauty.jpg" height="300">
+                <a href="#" class="text-light">Accessories<br>Dresses<br>Pants<br>T-Shirts</a>
+                <a href="#">See all in Fashion</a>
             </div>
+            <div class="other_cards p-2">
+                <h2>
+                    New in Fashion
+                </h2>
+                <div class="underline mx-0"></div>
+                <div class="d-flex justify-content-center" id="other_cards" style="flex-wrap: wrap;"></div>
+            </div>
+        </div>
+        <!-- image part ends -->
+    </div>
+    <!-- Featured categories ends -->
+
+    <!--********************** SECTION 5 *************************-->
+
+    <!--********************** SECTION 6 *************************-->
+
+    <!-- shop by brand starts -->
+    <div class="container-fluid  bg-white plr mtb">
+        <!-- head part starts -->
+        <h1 class="text-center ">
+            Shop by Brand
+        </h1>
+        <div class="underline"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active d-flex justify-content-around" id="car-act">
+                </div>
+                <div class="carousel-item active d-flex justify-content-around" id="car-inact">
+                </div>
+            </div>
+            <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- shop by brands ends -->
+
+    <!--********************** SECTION 6 *************************-->
+
+    <!--********************** SECTION 7 *************************-->
+
+    <!-- improve gallery module starts -->
+    <div class="container-fluid bg-secondary plr mtb">
+        <!-- head starts -->
+        <h1 class="text-center p-md-2">
+            Improved Gallery Module
+        </h1>
+        <div class="underline"></div>
+        <p class=" content text-center p-md-2">
+            Journal has been the best selling and most loved opencart theme since first launch in 2013. Tried and
+            tested.<br />
+            guyeforjioriojrhiurvuivjvoivrnoivjnvrhkrvnhceyu c8vncui yefcbnrvimfc
+        </p>
+        <!-- head ends -->
+        <!--image part starts-->
+        <div class="d-flex justify-content-around" id="imp_gal" style="flex-wrap: wrap;">
+        </div>
+        <!-- image part ends -->
+    </div>
+    <!-- improved gallery module ends -->
+
+    <!--********************** SECTION 7 *************************-->
+
+    <!--********************** SECTION 8 *************************-->
+    <!-- from our blog part starts -->
+    <div class="container-fluid  bg-light plr mtb">
+        <!--head starts -->
+        <h1 class="text-center">
+            From Our Blog
+        </h1>
+        <div class="underline"></div>
+        <p class=" content text-center">
+            Display any products as tabs or accordians with optional grid or carousel mode. Custom products per row
+            per
+        </p>
+        <!-- head ends -->
+
+        <!-- button part starts -->
+        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio9">BEAUTY</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio10">FASHION</label>
+        </div>
+        <!-- button part ends -->
+
+        <!-- image part starts -->
+        <div class="d-flex justify-content-around" id="latest_post" style="flex-wrap: wrap;">
+        </div>
+        <!-- image part ends -->
+    </div>
+    <!-- from our blog part ends -->
+
+    <!--********************** SECTION 8 *************************-->
+
+    <!--********************** SECTION 9 *************************-->
+    <!-- what are people saying about us-starts -->
+    <div class="container-fluid   bg-white plr mtb">
+        <!-- head starts -->
+        <h1 class="text-center ">
+            What are people saying about us?
+        </h1>
+        <!-- head ends -->
+        <div class="underline"></div>
+        <div class="d-flex justify-content-evenly py-3" id="people" style="flex-wrap: wrap;">
         </div>
     </div>
     <!-- what are people saying about us-ends -->
 
     <!--********************** SECTION 9 *************************-->
 
-    <!--********************** SEARCHPAGE **************************-->
-    <div class="searchPage" id="searchPage">
-        <div class="d-flex plr my-3" >
-            <h6><i class="fa-solid fa-house" id="home"></i> → Search</h6>
-        </div>
-        <div class=" bg-light">
-            <h2 class="searchResult plr" id="searchResult">Search - Camera </h2>
-            <hr>
-            <div class="d-flex plr ">
-                <div class="leftPartInSearch my-3">
-                    <div class="filterPart d-flex justify-content-between">
-                        <div class="head">
-                            <h5>Filter</h5>
-                            <div class="underline mx-0" style="height: 2px;"></div>
-                        </div>
-                        <button class="d-flex py-0">
-                            &times;
-                            Clear
-                        </button>
-                    </div>
-                    <div class="price">
-                        <div class=" d-flex justify-content-between">
-                            <h5>PRICE</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-                        </div>
-                        <div class="plusMenu">
-                            <input type="range" id="slider" name="slider" min="100" max="1000" value="500">
-                            <div class="d-flex">
-                                $<input type="text" id="min" name="min" value="500">-
-                                $<input type="text" id="max" name="max" value="1000">
-                            </div>
-                        </div>
-    
-                    </div>
-                    <hr>
-                    <div class="availability ">
-                        <div class="d-flex justify-content-between">
-                            <h5>AVAILABILITY</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="checkbox">
-                            <label>In Stock</label>
-    
-                            <input type="checkbox">
-                            <label>Out of Stock</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="subcategories">
-                        <div class="d-flex justify-content-between">
-                            <h5>SUBCATEGORIES</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <div>abc</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="brands">
-                        <div class="d-flex justify-content-between">
-                            <h5>BRANDS</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <div>abc</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="select">
-                        <div class="d-flex justify-content-between">
-                            <h5>SELECT</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <div>abc</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="radio">
-                        <div class="d-flex justify-content-between">
-                            <h5>RADIO</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="radio">
-                            <label>Small</label>
-                            <input type="radio">
-                            <label>Medium</label>
-                            <input type="radio">
-                            <label>Large</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="color">
-                        <div class="d-flex justify-content-between">
-                            <h5>COLOR</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <div>abc</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="clockspeed">
-                        <div class="d-flex justify-content-between">
-                            <h5>CLOCKSPEED</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="checkbox">
-                            <label>100 mhz</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="test1">
-                        <div class="d-flex justify-content-between">
-                            <h5>TEST 1</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="checkbox">
-                            <label>8GB</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="no_of_colors">
-                        <div class="d-flex justify-content-between">
-                            <h5>NO. OF COLORS</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="checkbox">
-                            <label>4</label>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="style">
-                        <div class="d-flex justify-content-between">
-                            <h5>STYLE</h5>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-    
-                        </div>
-                        <div class="plusMenu">
-                            <input type="checkbox">
-                            <label>Sleek</label>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="rightPartInSearch ">
-                    <div class="inputVals d-flex justify-content-between">
-                        <input type="text" class="searchResults" style="width:60%;">
-    
-                        <select class="allCategories" style="width:30%;">
-                            <option value="" disabled selected>All Categories</option>
-                            <option value="abc">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                        </select>
-                    </div>
-                    <div class="checkbox d-block my-3">
-                        <input type="checkbox">
-                        <label>Search in Subcategories</label> <br>
-                        <input type="checkbox">
-                        <label>Search in product descriptions</label>
-                    </div>
-                    <div class="bg-primary text-center my-3 searchB">
-                        <button class="text-white" style="font-size: 15px;">Search</button>
-                    </div>
-                    <h5 style="color:black">Products meeting the search criteria</h5>
-                    <div class="underline mx-0" style="height: 2px;"></div>
-                    <hr>
-                    <div class="filters d-flex justify-content-between ">
-                        <div class="leftFilters d-flex mx-2">
-                            <a><i class="fa fa-th" style="font-size: 20px;"></i></a>
-                            <a><i class="fa-solid fa-list mx-2" style="font-size: 20px;"></i></a>
-                            <div>
-                                <a class="d-flex mx-2">
-                                    <h6><i class="fa-solid fa-arrow-right-arrow-left mx-1 "
-                                            style="border: solid; border-radius: 50%;padding:2px"></i> </h6>
-                                    <h6 class="text">Product Compare</h6>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="rightFilters d-flex ">
-                            <div class="mx-2">
-                                <label class="listLabels" for="sortList">Sort By:</label>
-                                <select name="sortList" id="sortList">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="listLabels" for="showList">Show:</label>
-                                <select name="showList" id="showList" aria-placeholder="12">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div id="searchItem"></div>
-                    <hr>
-                    <h6 class="text-center my-2">You have reached the end of the list.</h6>
-    
-    
-                </div>
-    
-            </div>
-    
-        </div>
 
-    </div>
-    <!--********************** SEARCHPAGE  *************************-->
-
-    <!--********************** SECTION 10 *************************-->
-    <!-- most viewed section starts -->
-    <div class="container-fluid  bg-secondary plr mtb">
-        <h1>
-            Most Viewed
-        </h1>
-        <div class="underline mx-0"></div>
-        <div class="d-flex justify-content-between" id="most_viewed" style="flex-wrap: wrap;">
-        </div>
-    </div>
-    <!-- most viewed section ends -->
-
-    <!--********************** SECTION 10 *************************-->
-
-
-    <!--********************** SECTION 11 *************************-->
-
-    <!-- icons part-starts -->
-    <div class="container-fluid  bg-light plr ">
-        <div class="all_icons d-flex justify-content-center">
-            <i class="fa-brands fa-facebook p-2"></i>
-            <i class="fa-brands fa-twitter p-2"></i>
-            <i class="fa-brands fa-instagram p-2"></i>
-            <i class="fa-brands fa-linkedin p-2"></i>
-            <i class="fa-brands fa-youtube p-2"></i>
-            <i class="fa-brands fa-skype p-2"></i>
-        </div>
-    </div>
-    <!-- icons part ends -->
-    <!--********************** SECTION 11 *************************-->
-
-
-    <!--********************** SECTION 12 *************************-->
-    <!--bottom part  starts  -->
-    <div class="container-fluid  bg-white plr mtb">
-        <div class="row d-flex justify-content-around">
-            <div class="col-md-3 ">
-                <h4>
-                    About Us
-                </h4>
-                <div class="underline mx-0"></div>
-                <a class="d-block" href="#">About Us</a>
-                <a class="d-block" href="#">Delivery</a>
-                <a class="d-block" href="#">Privacy Policy</a>
-                <a class="d-block" href="#">Term & Conditions</a>
-                <a class="d-block" href="#">Custom Links</a>
-            </div>
-            <div class="col-md-3 ">
-                <h4>
-                    Customer Service
-                </h4>
-                <div class="underline mx-0"></div>
-                <a class="d-block" href="#">Contact</a>
-                <a class="d-block" href="#">Returns</a>
-                <a class="d-block" href="#">Site Maps</a>
-                <a class="d-block" href="#">Brands</a>
-                <a class="d-block" href="#">Unlimited Links</a>
-            </div>
-            <div class="col-md-3 ">
-                <h4>
-                    My Account
-                </h4>
-                <div class="underline mx-0"></div>
-                <a class="d-block" href="#">My Account</a>
-                <a class="d-block" href="#">Order</a>
-                <a class="d-block" href="#">Affliates</a>
-                <a class="d-block" href="#">Newsletter</a>
-                <a class="d-block" href="#">Gift Certificates</a>
-            </div>
-            <div class="col-md-3">
-                <h4>
-                    Newsletter
-                </h4>
-                <div class="underline mx-0"></div>
-                <p style="font-size: 20px;">
-                    Stay up date with news and<br /> by signing up for our<br /> newsletter.
-                </p>
-                <div class="input-group">
-                    <div class="form-outline">
-                        <input type="search" id="form1" class="form-control" placeholder="Your Email" />
-                        <!-- <label class="form-label" for="form1">Your Email</label> -->
-                    </div>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa-regular fa-envelope"></i>Send
-                    </button>
-                </div>
-                <input type="checkbox">
-                <label class="message">I have read and I agree to</label><span> <a href="#">Privacy
-                        Policy</a></span>
-
-            </div>
-        </div>
-    </div>
-    <!-- bottom part ends -->
-    <!--********************** SECTION 12 *************************-->
-
-
-
-    <!--********************** SECTION 13 *************************-->
-    <!-- footer starts -->
-    <div class="container-fluid  bg-secondary  plr ">
-        <div class=" sec13 d-flex justify-content-between">
-            <div class="left">
-                <p style="margin-top: 10px; font-size: 20px;">Copyright @2014,Your store, All rights Reserved</p>
-            </div>
-            <div class="right d-flex justify-content-evenly" style="flex-wrap:wrap">
-                <i class="fa-brands fa-cc-visa p-2"></i>
-                <i class="fa-brands fa-cc-paypal p-2"></i>
-                <i class="fa-brands fa-cc-discover p-2"></i>
-                <i class="fa-brands fa-cc-amex p-2"></i>
-                <i class="fa-brands fa-cc-stripe p-2"></i>
-            </div>
-        </div>
-
-    </div>
-    <!-- footer ends -->
-
-    <!--********************** SECTION 13 *************************-->
-    <a class=" btn bg-primary position-fixed bottom-0 left-100" href="#nav2">
-        <i class="fa-solid fa-arrow-up "></i>
-    </a>
+    <div id="footer"></div>
+    <script src="assets/js/data_fetching_homepage.js"></script>
+    <script src="assets/js/header_footer.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/search.js"></script>
-
 
 </body>
 
