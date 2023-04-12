@@ -1,0 +1,237 @@
+/****************COMMON CLASSES*********************/
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+li{
+    font-size: 13px;
+    font-weight: 350;
+    color: black;
+}
+/****************COMMON CLASSES*********************/
+
+.smallViews{
+    margin-right: 20px;
+}
+.imageIcons, .productImage{
+    border: 1px rgb(209, 203, 203) solid;
+    margin-bottom: 10px;
+}
+.searchProductLeft{
+    padding: 50px;
+}
+.searchProductRight{
+    padding: 50px;
+}
+.offer{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px;
+}
+.trend{
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(250, 149, 34);
+    border-radius: 5px;
+    padding: 2px;
+}
+.headDetail{
+    margin-right: 20px;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+.headDetail:hover{
+    border-bottom: 3px orange solid;
+}
+
+.showMore{
+    display: flex;
+    font-size: 15px;
+    color: white;
+    background-color: navy;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    border-radius: 5px;
+}
+.productDetailLeft{
+    border-right:1px grey solid;
+}
+.icon{
+    border: 1px gray solid;
+    max-height:100px;
+    max-width: 90px;
+    
+}
+.appleLogo{
+    max-width: 90px;
+    max-height: 100px;
+}
+.below h5{
+    font-size: 18px;
+    font-weight: 500;
+    color: grey;
+}
+.star{
+    font-size: 15px;
+    color: red;
+}
+select{
+    width: 200px;
+    padding: 5px;
+    color: grey;
+    background-color: white;
+    border: 1px  grey solid;
+}
+.small{
+    font-size: 15px;
+    border: 1px grey solid;
+    padding: 5px;
+}
+.colors{
+    max-height: 50px;
+    max-width: 50px;
+}
+.uploadButton{
+    background-color: navy;
+    padding: 8px;
+    border-radius: 5px;
+}
+.quantity{
+    width: 80px;
+}
+.addToCartButton{
+    background-color: navy;
+    padding:  10px 50px;
+    border-radius: 5px;
+}
+.buyNow{
+    background-color: lightgreen;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.question{
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.summary{
+    background-color: rgb(162, 194, 224);
+    color:rgb(82, 123, 161) ;
+    padding: 10px;
+}
+.view{
+    display: flex;
+}
+textarea{
+    width: 500px;
+    height: 100px;
+}
+.textInput{
+    width: 300px;
+}
+.imageIcons img{
+    width: 80px;
+    height: 80px;
+}
+.productImage{
+    height: 580px;
+}
+.productImage img{
+    height: 550px;
+    width: 550px;
+}
+#desContent, #display_table, #reviewContent, #customContent{
+    display: none;
+    
+}
+#t_head{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background-color: grey;
+}
+#t_body{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+
+}
+.checked{
+    color: rgb(247, 220, 72);
+}
+
+/**************FOR RESPONSIVNESS********************/
+@media screen and (max-width:1460px) {
+.plr{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+}
+@media screen and (max-width:1330px) {
+    .view{
+        display: block;
+    }
+}
+@media screen and (max-width:660px) {
+    .imageIcons img{
+        width: 50px;
+        height: 50px;
+    }
+    .productImage{
+        height: 420px;}
+
+    .productImage img{
+        width: 400px;
+        height: 400px;
+    }
+    .addToCartButton, .buyNow, .question{
+        padding:10px ;
+    }
+}
+@media screen and (max-width:580px) {
+    .searchProductRight{
+        padding: 5px;
+    }
+    textarea{
+        width: 300px;
+        height: 100px;
+        }
+}
+
+@media screen and (max-width:445px) {
+    .addToCartButton, .buyNow, .question{
+        padding: 10px;
+    }
+    .productImage{
+        height: 320px;}
+
+    .productImage img{
+        width: 300px;
+        height: 300px;
+    }
+    .head a{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .addToCartButton, .buyNow, .question{
+        padding:5px ;
+    }
+
+
+}
+
+
+/**************FOR RESPONSIVNESS********************/

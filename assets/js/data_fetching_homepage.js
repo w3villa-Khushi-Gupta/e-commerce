@@ -29,9 +29,11 @@ fetch("products_update.json")
         x.style.display = "flex";
         for (let i = 0; i < tempA.products_update.length; i++) {
             const product = tempA.products_update[i];
-            const update = document.createElement("div")
+            const update = document.createElement("a")
             update.style.overflow = "hidden";
-            update.innerHTML = `<div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
+            update.innerHTML = `
+            <a onclick="clickedProduct(${product.id})" href="searchedProduct.html">
+            <div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
               <img class="card-img-top position-relative" src="${product.img}" alt="Card image cap" height="300">
               <span class="position-absolute  pre_order">${product.label}</span>
                     ${product.percentage ? per_tag : ""}
@@ -69,7 +71,7 @@ fetch("products_update.json")
                       <h6>Question</h6>
                   </a>
               </div>
-          </div>
+          </div></a>
 `
             x.appendChild(update);
         }
