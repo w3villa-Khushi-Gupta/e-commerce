@@ -138,18 +138,18 @@ function owl2(){
             }
         }
 
-function changeContentFeaturedProducts(cat){
-    switch(cat){
-        case "Featured":
-            break;
-        case "Latest":
-            break;
-        case "Bestsellers":
-            break;
-        case "Specials":
-            break;
-    }
-}
+// function changeContentFeaturedProducts(cat){
+//     switch(cat){
+//         case "Featured":
+//             break;
+//         case "Latest":
+//             break;
+//         case "Bestsellers":
+//             break;
+//         case "Specials":
+//             break;
+//     }
+// }
 // Featured Products Section
 fetch("products_update.json")
     .then(response => response.json())
@@ -166,7 +166,7 @@ fetch("products_update.json")
             const update = document.createElement("a")
             update.style.overflow = "hidden";
             update.innerHTML = `
-            <a onclick="clickedProduct(${product.id})" href="searchedProduct.html">
+            <a href="searchedProduct.html?product_id=${product.id}">
             <div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
               <img class="card-img-top position-relative" src="${product.img}" alt="Card image cap" height="300">
               <span class="position-absolute  pre_order">${product.label}</span>

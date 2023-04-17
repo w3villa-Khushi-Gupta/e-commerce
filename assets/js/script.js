@@ -49,7 +49,7 @@ async function add_to_cart(event, productId, which) {
     console.log(y);
 
     const product = data.products_update.find(product => product.id === productId);
-    console.log(product.name);
+    // console.log(product.name);
 
     // addition of products in array
     const alreadyExists = which === 'cart' ? cartProduct.includes(productId) : wishlistProduct.includes(productId);
@@ -291,8 +291,8 @@ fetch("most_viewed.json")
                 <h4> ${product.name}</h4>
                 <h6> ${product.price}</h6>
                 <div class="icons d-flex justify-content-evenly">
-                    <i class="fa-regular fa-cart-shopping"></i>
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-cart-shopping" ></i> 
+                    <i class="fa-regular fa-heart" ></i>
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
             </div>
