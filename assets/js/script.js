@@ -365,4 +365,4 @@ fetch("most_viewed.json")
         changeContentWhyBuy(category);
 
     }
-    
+    defaultCategory()
