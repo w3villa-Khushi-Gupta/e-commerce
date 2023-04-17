@@ -1,5 +1,5 @@
-header=document.getElementById("header")
-header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="nav1">
+header = document.getElementById("header")
+header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="nav1">
 <div class="container-fluid ">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -10,7 +10,7 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
         <div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link " href="#"><i class="fa-solid fa-house mx-1"></i>Home</a>
+                    <a class="nav-link " href="index.html"><i class="fa-solid fa-house mx-1"></i>Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-award mx-1"></i>About Us</a>
@@ -28,7 +28,7 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li>
                             <hr class="dropdown-divider">
-                        </li>
+                        <ho/li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
@@ -192,7 +192,6 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
                         <i class="fas fa-user"></i>
                         <h6 id="welcome"></h6>
                     </button>
-
                 </li>
                 <li class="nav-item">
                     <button class="nav-link" onclick="openModal('register-modal')" id="register">
@@ -203,8 +202,6 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <h6>Logout</h6>
                     </button>
-
-
                 </li>
                 <li class="nav-item">
                     <!-- <a href="assets/wishlist.html"> -->
@@ -283,33 +280,694 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
     <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="all_dep">
             <li class="nav-item">
-                <a class="menuL bg-warning d-flex ">
+                <div class="menuAll bg-warning d-flex">
                     <i class="fa-solid fa-bars"></i>
-                    <h6 class="position-relative">ALL DEPARTMENTS
-                        <span class="position-absolute top-0 start-100 translate-middle badge  bg-danger">
-                            SALE
-                        </span>
+                    <h6 class="position-relative allDepartment tttt">ALL DEPARTMENTS
+                    <span class="position-absolute top-0 start-100 translate-middle badge  bg-danger">
+                        SALE
+                    </span>
                     </h6>
-                </a>
+                    <div class="allDep p-2">
+                        <div class="allDep-shopByCategory position-relative">
+                            <i class="fa-solid fa-bars mx-1" style="color:grey"></i>Shop By Category <span  style="color:grey;float: right;">►</span>
+                            <div class="shopByCategoryMenu ">
+                            <div class="d-flex">
+                            <div class="leftshopByCategoryMenu">
+                                <div class="row1 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row2 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline">See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightshopByCategoryMenu">
+                                <div class="shopByCategoryImg"><img src="assets/images/i_g5.jpg"></div>
+                            </div>
+                        </div>
+                        </div>
+                    
+                        </div>
+                        <div class="allDep-shopByBrands">
+                            <i class="fa-brands fa-apple mx-1" style="color:grey"></i>Shop By Brands <span  style="color:grey;float: right;">►</span>
+                            <div class="shopByCategoryMenu ">
+                            <div class="d-flex">
+                            <div class="leftshopByCategoryMenu">
+                                <div class="row1 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row2 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline">See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightshopByCategoryMenu">
+                                <div class="shopByCategoryImg"><img src="assets/images/i_g5.jpg"></div>
+                            </div>
+                        </div>
+                        
+
+                        </div>
+                        <div class="allDep-specialDeals">
+                            <i class="fa-solid fa-percent" style="color:grey"></i> Special Deals<span class="sale text-white bg-danger mx-1">SALE</span> <span  style="color:grey;float: right;">►</span>
+                            <div class="shopByCategoryMenu ">
+                            <div class="d-flex">
+                            <div class="leftshopByCategoryMenu">
+                                <div class="row1 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row2 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline">See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightshopByCategoryMenu">
+                                <div class="shopByCategoryImg"><img src="assets/images/i_g5.jpg"></div>
+                            </div>
+                        </div>
+                        
+
+                        </div>
+                        <div class="allDep-bestsellers">
+                            <i class="fa-solid fa-crown mx-1" style="color:grey"></i>Bestsellers <span  style="color:grey;float: right;">►</span>
+                            <div class="shopByCategoryMenu ">
+                            <div class="d-flex">
+                            <div class="leftshopByCategoryMenu">
+                                <div class="row1 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row2 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline">See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightshopByCategoryMenu">
+                                <div class="shopByCategoryImg"><img src="assets/images/i_g5.jpg"></div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="allDep-customLinks">
+                            <i class="fa-solid fa-certificate mx-1" style="color:grey"></i></i>Custom Links <span  style="color:grey;float: right;">►</span>
+                            <div class="shopByCategoryMenu ">
+                            <div class="d-flex">
+                            <div class="leftshopByCategoryMenu">
+                                <div class="row1 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row2 d-flex">
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline">See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="links">
+                                            <a>Accessories</a>
+                                            <a>Dresses</a>
+                                            <a>Pants</a>
+                                            <a>T-shirts</a>
+                                            <a style="text-decoration:underline"> See all products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightshopByCategoryMenu">
+                                <div class="shopByCategoryImg"><img src="assets/images/i_g5.jpg"></div>
+                            </div>
+                        </div>
+                        </div>
+
+                            
+                        </div>
+                        <div class="allDep-seeAllProducts">
+                            <i class="fa-solid fa-shop mx-1" style="color:grey"></i>See All Products<span
+                            class="new text-white bg-success mx-1">NEW</span> </p>
+                        </div>
+                    </div>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="menuL ">
+                <a class="menuMulti ">
                     <h6>MULTILEVEL</h6>
+                    <div class="multilevel ">
+                    <div class="accessories d-flex justify-content-between position-relative">
+                        <div>Accessories</div>
+                        <div>►</div>
+                        <div class="accessoriesMenu">
+                            <div>Belts</div>
+                            <div>Hats</div>
+                            <div class="jewellery position-relative">Jewellery<span  style="color:grey;float: right;">►</span>
+                                <div class="jewelleryMenu">
+                                    <div>Bracelets</div>
+                                    <div>Necklaces</div>
+                                    <div>Rings</div>
+                                    <div>Earrings</div>
+                                    <div>Bangles</div>
+                                </div>
+                            </div>
+                            <div>Scarves</div>
+                            <div>Sunglasses</div>
+                        </div>
+                    </div>
+                    <div class="dresses d-flex justify-content-between">
+                        <div>Dresses</div>
+                        <div>►</div>
+                        <div class="dressesMenu">
+                            <div>Casual</div>
+                            <div>Evening</div>
+                            <div>Occassion</div>
+                            <div>Skirt</div>
+                            <div>Summer</div>
+                        </div>
+                    </div>
+                    <div class="t-shirt d-flex justify-content-between">
+                        <div>T-shirts</div>
+                    </div>
+                    <div class="pants d-flex justify-content-between">
+                        <div>Pants</div>
+                        <div> ►</div>
+                        <div class="pantMenu">
+                            <div>Formals</div>
+                            <div>Jeans</div>
+                            <div>Jeggings></div>
+                            <div>Training</div>
+                        </div>
+                    </div>
+                    <div class="tops d-flex justify-content-between">
+                        <div>Tops</div>
+                        <div>►</div>
+                        <div class="topMenu">
+                            <div class="jacket">Jackets
+                                <span  style="color:grey;float: right;">►</span>
+                                <div class="jacketMenu">
+                                    <div>Blazers</div>
+                                    <div>Coat</div>
+                                    <div>Leather</div>
+                                    <div>Suit</div>
+                            </div>
+                            </div>
+                            <div>Shirts</div>
+                            <div>Sleeveless</div>
+                            <div>Summer</div>
+                        </div>
+
+                    </div>
+            
+                </div>
+            
                 </a>
             </li>
             <li class="nav-item">
-                <a class="menuL">
-                    <h6 class="position-relative">MEGA MENU
+                <div class="megaMenuList">
+                    <h6 class="position-relative" >MEGA MENU
                         <span class="position-absolute top-0 start-100 translate-middle badge  bg-warning">
                             NEW
                         </span>
                     </h6>
-                </a>
+                    <div class="megaMenu p-2">
+                        <h6 class=" mx-0" style="color:black">Top Categories</h6>
+                        <div class="d-flex">
+                            <div class="col1">
+                                <a>Fashion</a>
+                                <a>Bags</a>
+                                <a>Health & Beauty</a>
+                                <a>Footwear</a>
+                                <a>Home Decor<span class="new text-white bg-success mx-1">NEW</span></a>
+                                <a>Electronics</a>
+                                <a>Food</a>
+                                <a>Baby & Kids</a>
+                                <a>Flowers</a>
+                                <a>Appliances</a>
+                                <a>Sports</a>
+                            </div>
+                
+                            <div class="col2">
+                                <a>Fashion</a>
+                                <a>Bags</a>
+                                <a>Health & Beauty<span class="new text-white bg-primary mx-1">UNLIMITED</span></a>
+                                <a>Footwear</a>
+                                <a>Home Decor<span class="new text-white bg-success mx-1">NEW</span></a>
+                                <a>Electronics</a>
+                                <a>Food</a>
+                                <a>Baby & Kids<span class="new text-white bg-danger mx-1">OUT OF STOCK</span></a>
+                                <a>Flowers</a>
+                                <a>Appliances</a>
+                                <a>Sports</a>
+                            </div>
+                            <div class="col3">
+                                <a>Fashion</a>
+                                <a>Bags</a>
+                                <a>Health & Beauty</a>
+                                <a>Footwear</a>
+                                <a>Home Decor</a>
+                                <a>Electronics</a>
+                                <a>Food<span class="new text-white bg-warning mx-1">CUSTOM</span></a>
+                                <a>Baby & Kids</a>
+                                <a>Flowers</a>
+                                <a>Appliances<span class="new text-white bg-black mx-1">TRENDING</span></a>
+                                <a>Sports</a>
+                            </div>
+                            <div class="col4">
+                                <a>Fashion</a>
+                                <a>Bags</a>
+                                <a>Health & Beauty</a>
+                                <a>Footwear</a>
+                                <a>Home Decor<span class="new text-white bg-success mx-1">NEW</span></a>
+                                <a>Electronics</a>
+                                <a>Food</a>
+                                <a>Baby & Kids</a>
+                                <a>Flowers</a>
+                                <a>Appliances</a>
+                                <a>Sports</a>
+                            </div>
+                            <div class="col5">
+                                <div class="text-center">
+                                    <img src="	https://www.journal-theme.com/1/image/cache/catalog/journal3/banners/17-tall-220x280w.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="menuL ">
+                <div class="menuFull">
                     <h6>FULLWIDTH</h6>
-                </a>
+                    <div class="fullWidth">
+                        <div class="p-2 d-flex plr" >
+                            <div class="leftInFullWidth">
+                                <div class="topInLeftPart d-flex">
+                                    <div class="fashion">
+                                        <h5 style="color:black">FASHION</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInFashion"><img src="https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/demo09-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="electronics">
+                                        <h5 style="color:black">ELECTRONICS</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInElectronics"><img src="https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/elec-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="bags">
+                                        <h5 style="color:black">BAGS</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInBags"><img src="https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/bagcat-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                                <div class="bottomInLeftPart d-flex">
+                                    <div class="Health&Beauty">
+                                        <h5 style="color:black">HEALTH & BEAUTY</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInHealth"><img src="	https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/beauty-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footwear">
+                                        <h5 style="color:black">FOOTWEAR</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInFootwear"><img src="https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/f6-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="food">
+                                        <h5 style="color:black">FOOD</h5>
+                                        <div class="d-flex">
+                                            <div class="imgInFood"><img src="https://www.journal-theme.com/1/image/cache/catalog/journal3/categories/elec-150x150.jpg"></div>
+                                            <div class="links">
+                                                <a>Accessories</a>
+                                                <a>Dresses</a>
+                                                <a>Pants</a>
+                                                <a>T-shirts</a>
+                                                <a> See all products</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                            <div class="rightInFullWidth">
+                                <div class="headInFullWidth d-flex">
+                                    <h6 style="color:black" class="d-flex mx-2">TOP SELLARS</h6>
+                                    <h6 style="color:black">SPECIAL DEALS</h6>
+                                </div>
+                                <div class="cardsInFullWidth d-flex">
+                                    <div class="card  p-1 m-4" style="width: 15rem; " id="hell">
+                                        <img src="https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-190x190h.jpg" width="190"
+                                            height="190" alt="iPhone" title="iPhone" class="img-responsive img-first lazyload lazyloaded"
+                                            srcset="https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-190x190h.jpg 1x, https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-380x380h.jpg 2x"
+                                            data-ll-status="loaded">
+                                        <div class="headphones ">
+                                            <a class="card-title text-primary px-2" href="#">iphone </a>
+                                            <p class="card-text px-2">$101</p>
+                                        </div>
+                                        <span class="position-absolute  pre_order">Out Of Stock</span>
+                                        <hr>
+                                        <div class="action d-flex justify-content-around">
+                                            <button class="btn btn-primary my-2" style="border-radius:5px">ADD TO CART</button>
+                                            <div class="emo d-flex ">
+                                                <i class="fa-regular fa-heart mx-2 my-3"></i>
+                                                <i class="fa-solid fa-right-left mx-2 my-3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card   p-1 m-4" style="width: 15rem; " id="hell">
+                                        <img src="https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-190x190h.jpg" width="190"
+                                            height="190" alt="iPhone" title="iPhone" class="img-responsive img-first lazyload lazyloaded"
+                                            srcset="https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-190x190h.jpg 1x, https://www.journal-theme.com/1/image/cache/catalog/demo/iphone_1-380x380h.jpg 2x"
+                                            data-ll-status="loaded">
+                                        <div class="headphones ">
+                                            <a class="card-title text-primary px-2" href="#">iphone </a>
+                                            <p class="card-text px-2">$101</p>
+                                        </div>
+                                        <span class="position-absolute  pre_order">Out Of Stock</span>
+                                        <hr>
+                                        <div class="action d-flex justify-content-around">
+                                            <button class="btn btn-primary my-2" style="border-radius:5px">ADD TO CART</button>
+                                            <div class="emo d-flex ">
+                                                <i class="fa-regular fa-heart mx-2 my-3"></i>
+                                                <i class="fa-solid fa-right-left mx-2 my-3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+            
+                </div>
             </li>
         </ul>
 
@@ -335,8 +993,8 @@ header.innerHTML=`    <nav class="navbar navbar-expand-lg bg-white plr nb1" id="
 </div>
 </nav>
 `
-footer=document.getElementById("footer")
-footer.innerHTML=`    <div class="container-fluid  bg-secondary plr mtb">
+footer = document.getElementById("footer")
+footer.innerHTML = `    <div class="container-fluid  bg-secondary plr mtb">
 <h1>
     Most Viewed
 </h1>

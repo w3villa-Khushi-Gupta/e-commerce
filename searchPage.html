@@ -23,6 +23,7 @@
     
     <link rel="stylesheet" href="assets/css/search.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbarMenuStyle.css">
 
     <title>Search-Page</title>
 </head>
@@ -89,7 +90,12 @@
     
                         </div>
                         <div class="plusMenu">
-                            <div>abc</div>
+                            <div class="d-flex justify-content-around">
+                                <div class="subcategoriesImg">
+                                    <img src="assets/images/mobile 1.jpg">
+                                </div>
+                                <div style="margin-top: 20px; font-size: 25px;">Electronics</div>
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -101,7 +107,17 @@
     
                         </div>
                         <div class="plusMenu">
-                            <div>abc</div>
+                            <div class="d-flex">
+                                <div class="brandImg">
+                                    <img src="assets/images/htc.jpeg" >
+                                </div>
+                                <div class="brandImg">
+                                    <img src="assets/images/Apple-Logo.png" >
+                                </div>
+                                <div class="brandImg">
+                                    <img src="assets/images/mi_logo.png" >
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -124,7 +140,7 @@
                             <button class="minus">-</button>
     
                         </div>
-                        <div class="plusMenu">
+                        <div class="plusMenu d-block">
                             <input type="radio">
                             <label>Small</label>
                             <input type="radio">
@@ -142,7 +158,14 @@
     
                         </div>
                         <div class="plusMenu">
-                            <div>abc</div>
+                            <div class="d-flex justify-content-evenly my-2">
+                                <div style="height: 50px;width: 50px;background-color: red;"></div>
+                                <div style="height: 50px;width: 50px;background-color: green;"></div>
+                                <div style="height: 50px;width: 50px;background-color: blue;"></div>
+                                <div style="height: 50px;width: 50px;background-color: lavender;"></div>
+
+
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -200,9 +223,9 @@
                 </div>
     
                 <div class="rightPartInSearch ">
-                    <div class="inputVals d-flex justify-content-between">
+                    <div class="inputVals ">
                         <input type="text" class="searchResults" style="width:60%;">
-    
+
                         <select class="allCategories" style="width:30%;">
                             <option value="" disabled selected>All Categories</option>
                             <option value="abc">Volvo</option>
@@ -260,14 +283,9 @@
                     <div id="searchItem"></div>
                     <hr>
                     <h6 class="text-center my-2">You have reached the end of the list.</h6>
-    
-    
                 </div>
-    
             </div>
-    
         </div>
-
     </div>
 
 

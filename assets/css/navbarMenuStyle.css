@@ -1,0 +1,161 @@
+
+
+.allDep{
+    position: absolute;
+    top: 55px;
+    left: 120px;
+    background-color: rgb(241, 236, 236);
+    z-index: 1;
+    display: none;
+}
+.allDep div{
+    font-size:15px ;
+    font-weight: 500;
+    color: grey;
+    
+}
+.shopByCategoryMenu{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: rgb(233, 233, 233);
+    min-width: fit-content;
+    /* width: 700px; */
+    /* z-index: 1; */
+    display: none;
+
+}
+
+
+.shopByCategoryImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shopByCategoryMenu h5 ,.links{
+    margin: 10px 50px;
+}
+.links a{
+    display: block;
+}
+
+.multilevel{
+    position: absolute;
+    top: 55px;
+    left: 410px;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+    display: none;
+}
+.multilevel div{
+    font-size:15px ;
+    font-weight: 500;
+    color: grey;
+    margin: 0px;
+    padding: 5px;
+}
+.accessoriesMenu{
+    position: absolute;
+    top: 0%;
+    left: 95%;
+    background-color: rgb(233, 233, 233);
+    width: 200px;
+
+    display: none;
+}
+.jewelleryMenu{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+    display: none;
+}
+.dressesMenu{
+    position: absolute;
+    top: 25%;
+    left:95%;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+
+    display: none;
+
+}
+.pantMenu{
+    position: absolute;
+    top: 65%;
+    left: 95%;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+
+    display: none;
+
+}
+.topMenu{
+    position: absolute;
+    top: 85%;
+    left: 95%;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+    display: none;
+}
+.jacketMenu{
+    position: absolute;
+    top: 0%;
+    left: 95%;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    width: 200px;
+    display: none;
+}
+
+.megaMenu{
+    position: absolute;
+    top: 55px;
+    left: 590px;
+    background-color: rgb(233, 233, 233);
+    z-index: 1;
+    display: none;
+}
+.col1,.col2, .col3, .col4 {
+    border-right: 1px solid rgb(192, 190, 190);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.col1,.col2, .col3, .col4 ,.col5 a{
+    font-size:15px ;
+    font-weight: 500;
+    color: grey;
+    margin: 0px;
+    padding: 5px;
+}
+
+.fullWidth{
+   background-color: rgb(233, 233, 233);
+    position: absolute;
+    top:100%;
+    left: 0%;
+    z-index: 1;
+    display: none ;
+}
+.fullWidth .links, img{
+    padding: 10px;
+}
+.fullWidth .links a{
+    font-size:15px ;
+    font-weight: 500;
+    color: grey;
+    margin: 0px;
+    padding: 5px;
+
+}
+.menuAll:hover  .allDep, .menuMulti:hover  .multilevel, .megaMenuList:hover .megaMenu, .menuFull:hover .fullWidth, .accessories:hover .accessoriesMenu,.dresses:hover .dressesMenu,.pants:hover .pantMenu, .tops:hover .topMenu ,.jewellery:hover .jewelleryMenu,.jacket:hover .jacketMenu, .allDep-shopByCategory:hover .shopByCategoryMenu,.allDep-shopByBrands:hover .shopByCategoryMenu,.allDep-specialDeals:hover .shopByCategoryMenu,.allDep-bestsellers:hover .shopByCategoryMenu,.allDep-customLinks:hover .shopByCategoryMenu{
+    display: block;
+    cursor: pointer;
+}
+

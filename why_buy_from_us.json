@@ -1,9 +1,14 @@
 {
     "why_buy_from_us":[
-        {"img":"assets/images/girl1.jpg"},
-        {"img":"assets/images/girl2.jpg"},
-        {"img":"assets/images/girl3.jpg"},
-        {"img":"assets/images/girl4.jpeg"},
-        {"img":"assets/images/girl1.jpg"}
+        {"img":"assets/images/girl1.jpg",
+        "button":"FASHION"},
+        {"img":"assets/images/girl2.jpg",
+        "button":"BAGS"},
+        {"img":"assets/images/girl3.jpg",
+        "button":"HEALTH & BEAUTY"},
+        {"img":"assets/images/girl4.jpeg",
+        "button":"FOOTWEAR"},
+        {"img":"assets/images/girl1.jpg",
+        "button":"HOME DECOR"}
     ]
 }

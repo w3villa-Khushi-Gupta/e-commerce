@@ -53,6 +53,13 @@ padding: 2px;
 .price input{
     width: 100px;
 }
+.brandImg,.subcategoriesImg{
+    height: 70px;
+    width:90px;
+}
+.brandImg img, .subcategoriesImg img{
+    width: 100%;
+    height: 100%;}
 
 /* *********************Left Part*************************/
 
@@ -90,8 +97,17 @@ padding: 2px;
 .plusMenu{
     display: none;
 }
+.inputVals{
+    display: flex;
+    justify-content: space-between;
+}
+.allCatDropdown{
+    width: 100px; 
+    box-sizing: border-box; 
+}
 /* *********************Right Part*************************/
 
+/* *********************For Responsivness*************************/
 @media screen and (max-width:950px) {
     .plr{
         padding-left: 2px;
@@ -113,4 +129,9 @@ padding: 2px;
     .text,.listLabels{
         display: none;
     }
+    .inputVals{
+        display: block;
+    }
+
 }
+/* *********************For Responsivness*************************/

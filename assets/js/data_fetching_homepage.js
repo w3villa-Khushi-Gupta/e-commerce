@@ -1,21 +1,155 @@
+function owl(){
+    $(".abc").owlCarousel({
+        loop: true,
+        margin: 23,
+        // nav: false,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 0,
+            },
+            200: {
+                items: 1,
+            },
+            400: {
+                items: 2,
+            },
+            600: {
+                items: 3,
+            },
+            800: {
+                items: 3,
+            },
+            1000: {
+                items: 3,
+            },
+        }
+    });
+
+}
+function owl2(){
+    $(".shopByBrand").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 0,
+            },
+            300: {
+                items: 1,
+            },
+            400: {
+                items: 2,
+            },
+            600: {
+                items: 4
+            },
+            800: {
+                items: 5,
+            },
+            
+            1000: {
+                items: 6,
+            },
+        }
+    });
+
+}
 
 // why_buy_from_us
-fetch("why_buy_from_us.json")
-    .then(response => response.json())
-    .then(tempW => {
-        const x = document.getElementById("why_buy");
-        for (let i = 0; i < tempW.why_buy_from_us.length; i++) {
-            const card = tempW.why_buy_from_us[i];
-            const update = document.createElement("div");
-            update.innerHTML = `<div class="cutouts" style="width: 20rem;">
-            <img src="${card.img}" height="300" width="300">
-                <a class="text-white  position-absolute" href="#">Go Somewhere</a>
-        </div>`
-            x.appendChild(update)
+        function changeContentWhyBuy(cat) {
+            switch (cat) {
+                case "top-categories":
+                    fetch("why_buy_from_us.json")
+                        .then(response => response.json())
+                        .then(tempW => {
+                            const x = document.getElementById("why_buy");
+                            x.innerHTML="";
+                            for (let i = 0; i < tempW.why_buy_from_us.length; i++) {
+                                const card = tempW.why_buy_from_us[i];
+                                const update = document.createElement("div");
+                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                                        <img src="${card.img}" height="300" width="300">
+                                                            <a class="text-white  position-absolute" href="#">${card.button}</a>
+                                                    </div>`
+                                x.appendChild(update)
+                            }
+                        });
+                        break;
+
+                case "electronics":
+                fetch("electronics.json")
+                        .then(response => response.json())
+                        .then(tempW => {
+                            const x = document.getElementById("why_buy");
+                            x.innerHTML="";
+
+                            for (let i = 0; i < tempW.electronics.length; i++) {
+                                const card = tempW.electronics[i];
+                                const update = document.createElement("div");
+                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                                        <img src="${card.img}" height="300" width="300">
+                                                            <a class="text-white  position-absolute" href="#">${card.button}</a>
+                                                    </div>`
+                                x.appendChild(update)
+                            }
+                        });
+                        break;
+
+                case "beauty":
+                fetch("beauty.json")
+                        .then(response => response.json())
+                        .then(tempW => {
+                            const x = document.getElementById("why_buy");
+                            x.innerHTML="";
+
+                            for (let i = 0; i < tempW.beauty.length; i++) {
+                                const card = tempW.beauty[i];
+                                const update = document.createElement("div");
+                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                                        <img src="${card.img}" height="300" width="300">
+                                                            <a class="text-white  position-absolute" href="#">${card.button}</a>
+                                                    </div>`
+                                x.appendChild(update)
+                            }
+                        });
+                        break;
+
+                case "fashion":
+                fetch("fashion.json")
+                        .then(response => response.json())
+                        .then(tempW => {
+                            const x = document.getElementById("why_buy");
+                            x.innerHTML="";
+                            for (let i = 0; i < tempW.fashion.length; i++) {
+                                const card = tempW.fashion[i];
+                                const update = document.createElement("div");
+                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                                        <img src="${card.img}" height="300" width="300">
+                                                            <a class="text-white  position-absolute" href="#">${card.button}</a>
+                                                    </div>`
+                                x.appendChild(update)
+                            }
+                        });
+                        break;
+
+            }
         }
-    })
 
-
+function changeContentFeaturedProducts(cat){
+    switch(cat){
+        case "Featured":
+            break;
+        case "Latest":
+            break;
+        case "Bestsellers":
+            break;
+        case "Specials":
+            break;
+    }
+}
 // Featured Products Section
 fetch("products_update.json")
     .then(response => response.json())
@@ -125,25 +259,16 @@ fetch("shop_by_brand.json")
 .then(response => response.json())
 .then(tempS => {
     const x = document.getElementById("car-act");
-    const y = document.getElementById("car-inact");
     for (let i = 0; i < tempS.shop_by_brand.length; i++) {
         const product = tempS.shop_by_brand[i];
         const update = document.createElement("div");
-        update.innerHTML = `<div class="brands " style="width:10rem">
-    <img src="${product.brand}" class="img-thumbnail">
-</div>`
+        update.innerHTML = `<div class="item brands" style="width:10rem">
+                                <img src="${product.brand}" class="img-thumbnail">
+                            </div>`
         x.appendChild(update);
 
     }
-    for (let i = 0; i < tempS.shop_by_brand.length; i++) {
-        const product = tempS.shop_by_brand[i];
-        const update = document.createElement("div");
-        update.innerHTML = `<div class="brands " style="width:10rem">
-    <img src="${product.brand}" class="img-thumbnail">
-</div>`
-        y.appendChild(update)
-    }
-
+    owl2()
 })
 
 // improved gallery
@@ -234,5 +359,7 @@ fetch("what_people_are_saying.json")
         x.appendChild(update);
     }
 })
+
+    
 
 

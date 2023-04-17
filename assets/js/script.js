@@ -1,4 +1,7 @@
 //modal_to_display_cart & wishlist
+
+
+
 function modal(id) {
     let window;
     if (id === 'cart') {
@@ -237,6 +240,10 @@ window.onload = function () {
             auth(user);
         }
     }
+   
+    defaultCategory();
+   
+
 }
 function auth(username) {
 
@@ -295,19 +302,67 @@ fetch("most_viewed.json")
             x.appendChild(update);
         }
     })
-function point() {
-    let pointer = document.getElementById("point");
-    pointer.style.display = "block";
-}
-// function leavepoint(){
-//     let pointer=document.getElementById("point");
-//     pointer.style.display="none";
 
-// }
-// function toggleWhyBuyCategories(elem) {
-//     let activElem = document.getElementsByClassName("active-why-buy")[0];
-//     activElem.classList.remove("active-why-buy");
-//     elem.classList.add("active-why-buy");
-//     displayWhyBuyUs(elem.innerHTML.trim());
-//   }
+    window.addEventListener("load", function() {
+        let defaultActivePointer = document.querySelector(".categoryPointer a.active-pointer");
+        if (defaultActivePointer) {
+            defaultActivePointer.style.backgroundColor = "rgb(51, 153, 255)";
+            defaultActivePointer.style.color = "white";
+            let pointerDiv = document.querySelector(".pointerDiv");
+            pointerDiv.style.display = "block";
+            pointerDiv.style.top = defaultActivePointer.offsetTop + defaultActivePointer.offsetHeight - 8 + "px";
+            pointerDiv.style.left = defaultActivePointer.offsetLeft + (defaultActivePointer.offsetWidth / 2) + "px";
+        }
+        let category = defaultActivePointer.getAttribute("data-category");
+        changeContent(category);
 
+    });
+
+
+    
+
+
+    function toggleCategories(pointer) {
+        let activePointer = document.getElementsByClassName("active-pointer")[0];
+        let pointerDiv = document.querySelector(".pointerDiv");
+
+        activePointer.classList.remove("active-pointer");
+        pointer.classList.add("active-pointer");
+        activePointer.style.backgroundColor = "rgb(51, 153, 255)"; 
+        activePointer.style.color = "white"; 
+        let inactivePointers = document.querySelectorAll(".categoryPointer a:not(.active-pointer) p");
+        for (let i = 0; i < inactivePointers.length; i++) {
+            inactivePointers[i].style.backgroundColor = "white";
+            inactivePointers[i].style.color = "rgb(51, 153, 255)";
+        }
+    
+        if (pointer.classList.contains("active-pointer")) {
+            pointer.style.backgroundColor = "rgb(51, 153, 255)";
+            pointer.style.color = "white";
+            pointerDiv.style.display = "block";
+            pointerDiv.style.top = pointer.offsetTop + pointer.offsetHeight - 8 + "px";
+            pointerDiv.style.left = pointer.offsetLeft + (pointer.offsetWidth / 2) + "px";
+        }
+        let category = pointer.getAttribute("data-category");
+        changeContentWhyBuy(category);
+    }
+
+
+    function defaultCategory(){
+        let defaultPointer = document.getElementsByClassName('defaultPointer')[0];
+        defaultPointer.classList.add('active-pointer');
+        let pointerDiv = document.querySelector(".pointerDiv");
+        console.log(defaultPointer);
+        if (defaultPointer.classList.contains("active-pointer")) {
+            defaultPointer.style.backgroundColor = "rgb(51, 153, 255)";
+            defaultPointer.style.color = "white";
+            pointerDiv.style.display = "block";
+            pointerDiv.style.top = defaultPointer.offsetTop + defaultPointer.offsetHeight - 8 + "px";
+            pointerDiv.style.left = defaultPointer.offsetLeft + (defaultPointer.offsetWidth / 2) + "px";
+        }
+
+        let category = defaultPointer.getAttribute("data-category");
+        changeContentWhyBuy(category);
+
+    }
+    

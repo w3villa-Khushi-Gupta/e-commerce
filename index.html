@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- pagination -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!-- font-awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -24,9 +22,19 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+    <!-- css for Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css for Owl Carousel -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- css-link -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/pagination.css">
+    <link rel="stylesheet" href="assets/css/navbarMenuStyle.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +46,8 @@
 
 <body>
     <div id="header"></div>
+
+
     <!--**********************  SECTION 1 *************************-->
 
     <!-- carousel/card section -->
@@ -90,7 +100,7 @@
                     <div class="wearables d-flex bg-white px-0" style="width: 25rem;">
                         <div class="wearables-body">
                             <h6>WEARABLES</h6>
-                            <h4>Intelligent<br />& Durable<br />Besign</h4>
+                            <h4>Intelligent<br />& Durable<br />Design</h4>
                         </div>
                         <div class="card_image">
                             <img src="assets/images/mobile_3.png" height="200" width="240" />
@@ -179,24 +189,21 @@
                     href="#">Learn more</a></span>
         </p>
 
-        <div class="d-flex justify-content-center py-3 " style="flex-wrap:wrap">
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
-                onclick="point()">
-            <label class="btn btn-outline-primary position-relative" for="btnradio1">
-                TOP CATEGORIES
-                <div class="point bg-primary position-absolute" id="point"></div>
-
-            </label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio2">ELECTRONICS</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3">BEAUTY</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio4">FASHION</label>
+        <div class="categoryPointer">
+            <a>
+                <p class="defaultPointer" onclick="toggleCategories(this)" data-category="top-categories">Top Categories
+                </p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="electronics">Electronics</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="beauty">Beauty</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="fashion">Fashion</p>
+            </a>
+            <div class="pointerDiv" style="display:none;"></div>
         </div>
 
         <div class=" d-flex justify-content-around py-3 " id="why_buy" style="flex-wrap: wrap;">
@@ -234,20 +241,20 @@
         <!-- head part ends -->
 
         <!--button part starts-->
-        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked checked
-                onclick="point()">
-            <label class="btn btn-outline-primary" for="btnradio5">TOP CATEGORIES</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio6">ELECTRONICS</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio7">BEAUTY</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio8">FASHION</label>
+        <div class="categoryPointer">
+            <a>
+                <p class="defaultPointer" onclick="toggleCategories(this)" data-category="featured">Featured</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="latest">Latest</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="bestsellers">Bestsellers</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="specials">Specials</p>
+            </a>
+            <div class="pointerDiv" style="display:none;"></div>
         </div>
 
         <!-- button part ends -->
@@ -317,11 +324,11 @@
             Shop by Brand
         </h1>
         <div class="underline"></div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active d-flex justify-content-around" id="car-act">
-                </div>
-                <div class="carousel-item active d-flex justify-content-around" id="car-inact">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner"> -->
+        <div id="car-act" class="owl-carousel owl-theme shopByBrand">
+        </div>
+        <!-- <div class="carousel-item active d-flex justify-content-around" id="car-inact">
                 </div>
             </div>
             <div class="carousel-indicators ">
@@ -329,8 +336,8 @@
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
     </div>
 
     <!-- shop by brands ends -->
@@ -376,12 +383,14 @@
         <!-- head ends -->
 
         <!-- button part starts -->
-        <div class="d-flex justify-content-center py-3" style="flex-wrap:wrap">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio9">BEAUTY</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio10">FASHION</label>
+        <div class="categoryPointer">
+            <a>
+                <p class="defaultPointer" onclick="toggleCategories(this)" data-category="latest">Latest</p>
+            </a>
+            <a>
+                <p onclick="toggleCategories(this)" data-category="most-read">Most Read</p>
+            </a>
+            <div class="pointerDiv" style="display:none;"></div>
         </div>
         <!-- button part ends -->
 
@@ -412,6 +421,15 @@
 
 
     <div id="footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl crousel script  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="assets/js/data_fetching_homepage.js"></script>
     <script src="assets/js/header_footer.js"></script>
     <script src="assets/js/script.js"></script>
