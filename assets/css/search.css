@@ -9,13 +9,17 @@ h5{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.plr-S{
+    padding-left: 100px;
+    padding-right: 100px;
 }
 /* *********************COMMON CLASSES*********************** */
 
 /* *********************Left Part*************************/
+
+.address, .searchResult{
+    margin-left: 42px;
+}
 .leftPartInSearch{
     min-width:fit-content ;
     width: 20%;
@@ -37,6 +41,15 @@ padding: 2px;
     border-radius: 10px;
     margin-top:8% ;
     margin-bottom: 8%;
+}
+.filters{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.leftFilters{
+        margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 .plus{
     font-size: 20px;
@@ -105,19 +118,39 @@ padding: 2px;
     width: 100px; 
     box-sizing: border-box; 
 }
+.searchResults{
+    width: 60%;
+}
+.allCategories{
+    width: 40%;
+    margin-left: 20px;
+}
 /* *********************Right Part*************************/
 
 /* *********************For Responsivness*************************/
-@media screen and (max-width:950px) {
-    .plr{
-        padding-left: 2px;
-        padding-right: 2px;
+@media screen and (max-width:1000px) {
+    .plr-S{
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 @media screen and (max-width:840px) {
     .leftPartInSearch{
         display: none;
     }
+    .inputVals{
+        display: block;
+    }
+    .searchResults{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .allCategories{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    
 }
 
 @media screen and (max-width:750px) {
@@ -131,6 +164,12 @@ padding: 2px;
     }
     .inputVals{
         display: block;
+    }
+}
+@media screen and (max-width:450px) {
+    .plr-S{
+        padding-left: 2px;
+        padding-right: 2px;
     }
 
 }

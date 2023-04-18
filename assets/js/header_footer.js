@@ -223,7 +223,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="na
     <div>
         <button class="navbar-toggler cart" type="button" data-bs-toggle="collapse" data-bs-target="#cart"
             aria-controls="#cart" aria-expanded="false" aria-label="Toggle navigation" order="1">
-            <span> <i class="fa-solid fa-cart-shopping"></i></span>
+            <span> <i class="smallWincart fa-solid fa-cart-shopping"></i></span>
         </button>
         <div class="collapse navbar-collapse">
             <div class="d-flex justify-content-between" id="cart">

@@ -41,7 +41,7 @@ function owl2(){
                 items: 1,
             },
             400: {
-                items: 2,
+                items: 1,
             },
             600: {
                 items: 4
@@ -262,7 +262,7 @@ fetch("shop_by_brand.json")
     for (let i = 0; i < tempS.shop_by_brand.length; i++) {
         const product = tempS.shop_by_brand[i];
         const update = document.createElement("div");
-        update.innerHTML = `<div class="item brands" style="width:10rem">
+        update.innerHTML = `<div class="itemBrands " style="width:10rem">
                                 <img src="${product.brand}" class="img-thumbnail">
                             </div>`
         x.appendChild(update);
@@ -297,7 +297,7 @@ fetch("from_our_blog.json")
         for (let i = 0; i < tempF.from_our_blog.length; i++) {
             const product = tempF.from_our_blog[i];
             const update = document.createElement("div")
-            update.innerHTML = `<div style="width: 30rem;">
+            update.innerHTML = `<div class="fromOurBlogCard" >
         <div class="card">
             <img class="card-img-top "
                 src="${product.img}" alt="Card image cap">
@@ -340,7 +340,7 @@ fetch("what_people_are_saying.json")
     for (let i = 0; i < tempP.what_people_are_saying.length; i++) {
         const product = tempP.what_people_are_saying[i];
         const update = document.createElement("div");
-        update.innerHTML = `<div  style="width: 30rem;">
+        update.innerHTML = `<div class="whatPeopleAreSayingCard" >
     <div class="card">
         <div class="card-img-top text-center">
             <i class="fa-solid fa-quote-left comma"></i>

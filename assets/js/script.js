@@ -284,7 +284,7 @@ fetch("most_viewed.json")
         for (let i = 0; i < tempV.most_viewed.length; i++) {
             const product = tempV.most_viewed[i];
             const update = document.createElement("div");
-            update.innerHTML = `            <div class="col-3" style="width: 25rem;">
+            update.innerHTML = `            <div class="col-3 justify-content-center mostViewedCards" >
         <div class="item d-flex p-2 bg-white">
             <img src=" ${product.img}" height="100" width="100" />
             <div class="item-body">
@@ -366,3 +366,31 @@ fetch("most_viewed.json")
 
     }
     defaultCategory()
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("carSlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+

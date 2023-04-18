@@ -143,7 +143,7 @@
     z-index: 1;
     display: none ;
 }
-.fullWidth .links, img{
+.fullWidth .links img{
     padding: 10px;
 }
 .fullWidth .links a{
