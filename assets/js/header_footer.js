@@ -994,12 +994,12 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="na
 </nav>
 `
 footer = document.getElementById("footer")
-footer.innerHTML = `    <div class="container-fluid  bg-secondary plr mtb">
+footer.innerHTML = `<div class="container-fluid  bg-secondary plr mtb">
 <h1>
     Most Viewed
 </h1>
 <div class="underline mx-0"></div>
-<div class="d-flex justify-content-between" id="most_viewed" style="flex-wrap: wrap;">
+<div class="d-flex justify-content-evenly" id="most_viewed" style="flex-wrap: wrap;">
 </div>
 </div>
 

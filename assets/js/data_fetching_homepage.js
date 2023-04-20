@@ -1,27 +1,60 @@
-function owl(){
-    $(".abc").owlCarousel({
+function owl4(){
+    $(".fourCards").owlCarousel({
         loop: true,
         margin: 23,
         // nav: false,
         autoplay: false,
         responsive: {
-            0: {
+            0:{
                 items: 0,
             },
-            200: {
+            300:{
                 items: 1,
             },
-            400: {
-                items: 2,
-            },
-            600: {
-                items: 3,
+            500: {
+                items: 1
             },
             800: {
-                items: 3,
+                items: 2
+            },
+            1200: {
+                items: 3
+            },
+            1800: {
+                items: 4
+            },
+        }
+    });
+
+}
+function owl5(){
+    $(".fiveCards").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: false,
+        responsive: {
+            0:{
+                items: 0,
+            },
+            300:{
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            800: {
+                items: 2
             },
             1000: {
                 items: 3,
+            },
+            1400: {
+                items: 4,
+            },
+
+            1800: {
+                items: 5,
             },
         }
     });
@@ -34,28 +67,56 @@ function owl2(){
         nav: false,
         autoplay: false,
         responsive: {
-            0: {
+            0:{
                 items: 0,
             },
-            300: {
+            300:{
                 items: 1,
             },
-            400: {
+            500: {
                 items: 1,
             },
             600: {
-                items: 4
+                items: 2,
             },
             800: {
-                items: 5,
+                items: 3
+            },
+            1000: {
+                items: 4,
             },
             
-            1000: {
+            1800: {
                 items: 6,
             },
         }
     });
 
+}
+function owl3(){
+    $(".threeCards").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: false,
+        responsive: {
+            0:{
+                items: 0,
+            },
+            300:{
+                items: 1,
+            },
+            600: {
+                items: 1
+            },
+            1200: {
+                items: 2
+            },
+            1800: {
+                items: 3
+            },
+        }
+    });
 }
 
 // why_buy_from_us
@@ -70,12 +131,12 @@ function owl2(){
                             for (let i = 0; i < tempW.why_buy_from_us.length; i++) {
                                 const card = tempW.why_buy_from_us[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
                                 x.appendChild(update)
-                            }
+                            }owl5();
                         });
                         break;
 
@@ -89,12 +150,12 @@ function owl2(){
                             for (let i = 0; i < tempW.electronics.length; i++) {
                                 const card = tempW.electronics[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class=" item cutouts" style="width: 20rem;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
                                 x.appendChild(update)
-                            }
+                            }owl5();
                         });
                         break;
 
@@ -108,12 +169,12 @@ function owl2(){
                             for (let i = 0; i < tempW.beauty.length; i++) {
                                 const card = tempW.beauty[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
                                 x.appendChild(update)
-                            }
+                            }owl5();
                         });
                         break;
 
@@ -126,12 +187,12 @@ function owl2(){
                             for (let i = 0; i < tempW.fashion.length; i++) {
                                 const card = tempW.fashion[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
                                 x.appendChild(update)
-                            }
+                            }owl5();
                         });
                         break;
 
@@ -164,10 +225,10 @@ fetch("products_update.json")
         for (let i = 0; i < tempA.products_update.length; i++) {
             const product = tempA.products_update[i];
             const update = document.createElement("a")
-            update.style.overflow = "hidden";
+            // update.style.overflow = "hidden";
             update.innerHTML = `
             <a href="searchedProduct.html?product_id=${product.id}">
-            <div class="card  px-0 d-flex" style="width: 20rem;" id="${product.name}">
+            <div class="card  px-0 d-flex" style="width: 20rem;margin-left:auto;margin-right:auto;overflow:hidden" id="${product.name}">
               <img class="card-img-top position-relative" src="${product.img}" alt="Card image cap" height="300">
               <span class="position-absolute  pre_order">${product.label}</span>
                     ${product.percentage ? per_tag : ""}
@@ -214,6 +275,8 @@ fetch("products_update.json")
         for (input of quantityInput) {
             input.addEventListener('change', quantityChanged)
         }
+        owl4()
+
     })
 
 
@@ -249,11 +312,12 @@ fetch("products_update.json")
             </div>
         </div>
     </div>`
-            y.append(update);
+            
+    y.append(update);
         }
+        // owl4()
 
     })
-
 // shop by brands
 fetch("shop_by_brand.json")
 .then(response => response.json())
@@ -297,7 +361,7 @@ fetch("from_our_blog.json")
         for (let i = 0; i < tempF.from_our_blog.length; i++) {
             const product = tempF.from_our_blog[i];
             const update = document.createElement("div")
-            update.innerHTML = `<div class="fromOurBlogCard" >
+            update.innerHTML = `<div class="fromOurBlogCard" style="margin-left:auto;margin-right:auto">
         <div class="card">
             <img class="card-img-top "
                 src="${product.img}" alt="Card image cap">
@@ -329,6 +393,7 @@ fetch("from_our_blog.json")
 `
             x.appendChild(update)
         }
+        // owl3()
     })
 
 
@@ -340,7 +405,7 @@ fetch("what_people_are_saying.json")
     for (let i = 0; i < tempP.what_people_are_saying.length; i++) {
         const product = tempP.what_people_are_saying[i];
         const update = document.createElement("div");
-        update.innerHTML = `<div class="whatPeopleAreSayingCard" >
+        update.innerHTML = `<div class="whatPeopleAreSayingCard" style="margin-left:auto;margin-right:auto" >
     <div class="card">
         <div class="card-img-top text-center">
             <i class="fa-solid fa-quote-left comma"></i>
@@ -358,6 +423,8 @@ fetch("what_people_are_saying.json")
 `
         x.appendChild(update);
     }
+    owl3()
+
 })
 
     

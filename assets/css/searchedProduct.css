@@ -1,4 +1,10 @@
 /****************COMMON CLASSES*********************/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 hr{
     margin-top: 10px;
     margin-bottom: 10px;

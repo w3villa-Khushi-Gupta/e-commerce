@@ -284,7 +284,7 @@ fetch("most_viewed.json")
         for (let i = 0; i < tempV.most_viewed.length; i++) {
             const product = tempV.most_viewed[i];
             const update = document.createElement("div");
-            update.innerHTML = `            <div class="col-3 justify-content-center mostViewedCards" >
+            update.innerHTML = `<div class="col-3 justify-content-center mostViewedCards" >
         <div class="item d-flex p-2 bg-white">
             <img src=" ${product.img}" height="100" width="100" />
             <div class="item-body">
