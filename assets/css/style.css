@@ -134,6 +134,9 @@ hr {
 .search {
     border-radius: 2px;
 }
+#searchButton{
+    padding: 2px;
+}
 
 /* *************Navbar 2***************** */
 
@@ -704,7 +707,12 @@ input[type=number]::-webkit-outer-spin-button {
     height: 180px;
 }}
 
-@media screen and (max-width:1380px) {
+@media screen and (max-width:1480px) {
+    #all_dep li h6{
+        padding: 10px;
+    }
+    #all_dep li i  {
+        padding: 10px;}
     .homepageCar {
         display: block;
     }
@@ -721,19 +729,50 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
 
+}@media screen and (max-width:1200px) {
+
+    #journal{
+        font-size: 40px;
+    }
+
+    }#icons li h6 {
+        font-size: 15px;
+
+    }
+    #icons li button{
+        padding: 1px;}
+
+#cartEnquiry{
+    font-size: 15px;
+    padding: 5px;
+}
+#all_dep li h6,i  {
+    font-size: 15px;
+    padding: 9px;
+}     
+#all_dep li i  {
+    font-size: 15px;
+    padding: 9px;
+
 }
 
 @media screen and (max-width:1150px) {
+    /* #all_dep .nav-item{
+        margin: 0px;
+        padding: 5px;
+
+    } */
+    
     .contentOnImg {
         position: absolute;
-        top: 15%;
+        top: 25%;
         left: 10%;
         width: 40%;
     }
 
     .carouselMobileBadge {
         padding: 2px;
-        font-size: 12px;
+        font-size: 15px;
         color: white;
         font-weight: 500;
         background-color: blue;
@@ -769,6 +808,9 @@ input[type=number]::-webkit-outer-spin-button {
     .sideCardImg {
         width: 200px;
         height: 200px;
+    }
+    .contentOnImg {
+        top: 15%;
     }
 
 }
@@ -824,10 +866,10 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .carouselMessage {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
-        margin-top: 15px;
-        margin-bottom: 10px;
+        margin-top: 12px;
+        margin-bottom: 8px;
     }
 
     .sideCardTop,
@@ -838,6 +880,9 @@ input[type=number]::-webkit-outer-spin-button {
     .sideCardImg {
         width: 150px;
         height: 150px;
+    }
+    .contentOnImg {
+        top: 12%;
     }
 
     .contentOnSideImg h6 {

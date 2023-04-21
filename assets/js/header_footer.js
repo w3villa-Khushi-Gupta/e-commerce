@@ -212,10 +212,10 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="na
                     <!-- </a> -->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <button class="nav-link" href="#">
                         <i class="fas fa-repeat"></i>
                         <h6>Compare</h6>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
