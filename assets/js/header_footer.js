@@ -165,7 +165,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="na
                     <ul id="search-results"></ul>
 
                 </div>
-                <div><button class="btn btn-primary search" type="search" id="serachButton"><i
+                <div><button class="btn btn-primary search" type="search" id="searchButton"><i
                             class="fas fa-search"></i></button>
 
                 </div>
