@@ -80,6 +80,7 @@ hr {
     font-size: 50px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
 }
 
 #icons li {
@@ -675,16 +676,58 @@ input[type=number]::-webkit-outer-spin-button {
 #logout {
     display: none;
 }
-
+.firstNav{
+    padding: 0px;
+    margin: 0px;
+}
+.firstNavHome a{
+    padding-left: 0px;
+}
+.anchorLinks div{
+    padding-right: 0px;
+}
 
 /* *************For Responsivness*************** */
-@media screen and (max-width:2000px) {
+@media screen and (max-width:2500px) {
     .hide {
         display: none;
     }
-
+}
+@media screen and (min-width:2000px) {
+    .plr{
+        padding-left: 200px;
+        padding-right:200px ;
+    }
 }
 
+@media screen and (min-width:2200px) {
+    .plr{
+        padding-left: 300px;
+        padding-right:300px ;
+    }
+    
+}
+@media screen and (min-width:2300px) {
+
+.plr{
+    padding-left: 500px;
+    padding-right:500px ;
+}
+.sideCardTop,
+.sideCardBottom {
+    margin: 10px;
+}
+
+.sideCardImg {
+    width: 200px;
+    height: 200px;
+}
+.contentOnImg {
+    top: 12%;
+}
+
+
+}
 @media screen and (max-width:1750px) {
     .contentOnImg {
         top: 20%;
@@ -748,12 +791,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #all_dep li h6,i  {
     font-size: 15px;
-    padding: 9px;
 }     
-#all_dep li i  {
-    font-size: 15px;
-    padding: 9px;
 
+.compare{
+    margin-top: 10px;
 }
 
 @media screen and (max-width:1150px) {
@@ -897,11 +938,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media screen and (max-width:620px) {
     .plr {
-        padding-left: 2px;
-        padding-right: 2px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     #cart i {
         color: black;
+    }
+    #journal{
+        padding-left: 0px;
     }
 }
 
@@ -986,6 +1030,10 @@ input[type=number]::-webkit-outer-spin-button {
 
     .mostViewedCards {
         width: 20rem;
+    }
+    .plr {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 }

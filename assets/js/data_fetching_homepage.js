@@ -131,7 +131,7 @@ function owl3(){
                             for (let i = 0; i < tempW.why_buy_from_us.length; i++) {
                                 const card = tempW.why_buy_from_us[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;style="width: 20rem;margin-left:auto;margin-right:auto;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
@@ -150,7 +150,7 @@ function owl3(){
                             for (let i = 0; i < tempW.electronics.length; i++) {
                                 const card = tempW.electronics[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class=" item cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class=" item cutouts" style="width: 20rem;style="width: 20rem;margin-left:auto;margin-right:auto;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
@@ -169,7 +169,7 @@ function owl3(){
                             for (let i = 0; i < tempW.beauty.length; i++) {
                                 const card = tempW.beauty[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;style="width: 20rem;margin-left:auto;margin-right:auto;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
@@ -187,7 +187,7 @@ function owl3(){
                             for (let i = 0; i < tempW.fashion.length; i++) {
                                 const card = tempW.fashion[i];
                                 const update = document.createElement("div");
-                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;">
+                                update.innerHTML = `<div class="item cutouts" style="width: 20rem;style="width: 20rem;margin-left:auto;margin-right:auto;">
                                                         <img src="${card.img}" height="300" width="300">
                                                             <a class="text-white  position-absolute" href="#">${card.button}</a>
                                                     </div>`
@@ -253,13 +253,12 @@ fetch("products_update.json")
                   <button class="btn btn-primary " style="border-radius:5px" onclick="add_to_cart(event,${product.id},'cart')">ADD TO CART</button>
                   <div class="emo d-flex ">
                      <button onclick="add_to_cart(event,${product.id},'wishlist')"><i class="fa-regular fa-heart mx-2"></i></button>
-                      <i class="fa-solid fa-right-left mx-2"></i>
+                      <i class="fa-solid fa-right-left m-2"></i>
                   </div>
               </div>
               <div class="xtra d-flex justify-content-between bg-light p-2">
                   <a href="#" class="card-link d-flex justify-content-around">
-                      <i class="fa-solid fa-circle-dollar"></i>
-                      <h6>Buy Now</h6>
+                      <h6>$ Buy Now</h6>
                   </a>
                   <a href="#" class="card-link d-flex justify-content-around">
                       <i class="fa-solid fa-circle-question"></i>

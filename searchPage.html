@@ -32,20 +32,20 @@
 
 
     <div class="searchPage" id="searchPage">
-        <div class="d-flex plr-S my-3" >
+        <div class="d-flex plr m-3" >
             <h6 class="address"><i class="fa-solid fa-house" id="home"></i> → Search</h6>
         </div>
-        <div class=" bg-light">
-            <h2 class="searchResult plr-S " id="searchResult">Search - Camera </h2>
+        <div class=" bg-light searchPageMain">
+            <h2 class="searchResult plr " id="searchResult">Search - Camera </h2>
             <hr>
-            <div class="d-flex plr-S justify-content-center">
+            <div class="d-flex plr justify-content-center ">
                 <div class="leftPartInSearch my-3">
                     <div class="filterPart d-flex justify-content-between">
                         <div class="head">
                             <h5>Filter</h5>
                             <div class="underline mx-0" style="height: 2px;"></div>
                         </div>
-                        <button class="d-flex py-0">
+                        <button class="d-flex py-0 clearButton">
                             &times;
                             Clear
                         </button>
@@ -342,18 +342,15 @@
                   <button class="btn btn-primary " style="border-radius:5px" onclick="add_to_cart(event,${product.id},'cart')">ADD TO CART</button>
                   <div class="emo d-flex ">
                      <button onclick="add_to_cart(event,${product.id},'wishlist')"><i class="fa-regular fa-heart mx-2"></i></button>
-                      <i class="fa-solid fa-right-left mx-2"></i>
+                      <i class="fa-solid fa-right-left m-2"></i>
                   </div>
               </div>
               <div class="xtra d-flex justify-content-between bg-light p-2">
                   <a href="#" class="card-link d-flex justify-content-around">
-                      <i class="fa-solid fa-circle-dollar"></i>
-                      <h6>Buy Now</h6>
+                      <h6>$ Buy Now</h6>
                   </a>
                   <a href="#" class="card-link d-flex justify-content-around">
-                      <i class="fa-solid fa-circle-question"></i>
-
-                      <h6>Question</h6>
+                      <h6>? Question</h6>
                   </a>
               </div>
           </div>

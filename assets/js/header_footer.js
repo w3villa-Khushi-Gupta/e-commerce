@@ -1,6 +1,6 @@
 header = document.getElementById("header")
 header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="nav1">
-<div class="container-fluid ">
+<div class="container-fluid firstNav">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -10,7 +10,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg bg-white plr nb1" id="na
         <div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link " href="index.html"><i class="fa-solid fa-house mx-1"></i>Home</a>
+                    <a class="nav-link firstNavHome" href="index.html"><i class="fa-solid fa-house mx-1"></i>Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-award mx-1"></i>About Us</a>
@@ -1017,7 +1017,7 @@ footer.innerHTML = `<div class="container-fluid  bg-secondary plr mtb">
 
 
 <div class="container-fluid  bg-white plr mtb">
-<div class="row d-flex justify-content-around">
+<div class="row d-flex justify-content-around anchorLinks">
     <div class="col-md-3 ">
         <h4>
             About Us
