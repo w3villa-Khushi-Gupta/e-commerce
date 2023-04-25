@@ -261,8 +261,7 @@ fetch("products_update.json")
                       <h6>$ Buy Now</h6>
                   </a>
                   <a href="#" class="card-link d-flex justify-content-around">
-                      <i class="fa-solid fa-circle-question"></i>
-                      <h6>Question</h6>
+                      <h6>? Question</h6>
                   </a>
               </div>
           </div></a>

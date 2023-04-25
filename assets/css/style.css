@@ -370,6 +370,8 @@ img {
 
 .cutouts img {
     border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cutouts a {
@@ -724,10 +726,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .contentOnImg {
     top: 12%;
-}
+}}
 
 
-}
 @media screen and (min-width:2900px) {
     .plr{
         padding-left: 1000px;
