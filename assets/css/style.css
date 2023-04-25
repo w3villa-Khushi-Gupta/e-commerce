@@ -688,7 +688,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* *************For Responsivness*************** */
-@media screen and (max-width:2500px) {
+@media screen and (max-width:3700px) {
     .hide {
         display: none;
     }
@@ -728,6 +728,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 }
+@media screen and (min-width:2900px) {
+    .plr{
+        padding-left: 1000px;
+        padding-right:1000px ;
+    }
+    
+}
+
 @media screen and (max-width:1750px) {
     .contentOnImg {
         top: 20%;
