@@ -690,10 +690,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* *************For Responsivness*************** */
-@media screen and (max-width:3700px) {
-    .hide {
-        display: none;
+@media screen and (min-width:3700px) {
+    .plr{
+        padding-left: 1500px;
+        padding-right:1500px ;
     }
+
 }
 @media screen and (min-width:2000px) {
     .plr{
@@ -899,7 +901,12 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
 }
+@media screen and (min-width:992px) {
 
+.hide {
+    display: none;
+}
+}
 @media screen and (max-width:750px) {
     .sec1 {
         display: block;
